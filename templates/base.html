@@ -1,13 +1,13 @@
 <!doctype html>
 {% autoescape true %}
 <head>
- <meta charset="us-ascii">
+ <meta charset="utf-8">
  <meta name="description" content="tasklist">
  
- {% if title %}
+ {% if title -%}
  <title>{{ title }}</title>
- {% else %}
- <title>TaskList</title>
+ {% else -%}
+ <title>task-chrono</title>
  {% endif %}
  
  <link rel="stylesheet" href="css/tasklist.css">
@@ -17,8 +17,13 @@
  <script type="text/javascript" src="js/tasklist.js"></script>
 </head>
 
-<body>
- <div id="wrapper">  
+<body onload="setEventHandlers()">
+ <div id="wrapper"> 
+  <div id="menu">
+   <a href="{{ logout_url|safe }}">Log out</a>
+  </div>
+  
+  <hr> 
   {% block content %}
   {% endblock %}
  </div>

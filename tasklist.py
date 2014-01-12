@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2014, Ludo Visser
+
+# Copyright (c) 2014 Ludo Visser
 #
 # task-chrono is distributed under the terms and conditions of the MIT license.
 # The full license can be found in the LICENSE file.
@@ -119,6 +120,21 @@ class NewTaskHandler(webapp2.RequestHandler):
             # Get key for requested list
             list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
             list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
+            query_params = {'list_name': list_name}
+            
+            # Validate task name
+            input_name = self.request.get('task_name', '')
+            if not input_name.isalnum():
+                # Invalid task name
+                self.redirect('/?' + urllib.urlencode(query_params))
+                return
+            
+            # Validate task estimate
+            input_estimate = self.request.get('estimate', '0')
+            if not input_estimate[0].isdigit():
+                # Invalid estimate
+                self.redirect('/?' + urllib.urlencode(query_params))
+                return
             
             # Helper function for parsing parts of estimate string
             def parse(string, regex):
@@ -134,19 +150,18 @@ class NewTaskHandler(webapp2.RequestHandler):
                 return value
             
             # Get estimate in days, hours and minutes
-            d = parse(self.request.get('estimate', ''), RE_DAY)
-            h = parse(self.request.get('estimate', ''), RE_HOUR)
-            m = parse(self.request.get('estimate', ''), RE_MIN)
+            d = parse(input_estimate, RE_DAY)
+            h = parse(input_estimate, RE_HOUR)
+            m = parse(input_estimate, RE_MIN)
             estimate = datetime.timedelta(days=d, hours=h, minutes=m)
             
             # Create and add new task
             task = Task(parent=list_key)
-            task.name = self.request.get('task_name')
+            task.name = input_name
             task.estimate = int(estimate.total_seconds())
             task.put()
             
             # Redirect to main page
-            query_params = {'list_name': list_name}
             self.redirect('/?' + urllib.urlencode(query_params))
 
 
@@ -216,4 +231,4 @@ application = webapp2.WSGIApplication(
      ('/new', NewTaskHandler),
      ('/start', StartTaskHandler),
      ('/stop', StopTaskHandler)
-    ], debug=True)
+    ], debug=False)

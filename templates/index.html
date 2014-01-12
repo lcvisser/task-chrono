@@ -1,53 +1,53 @@
 {% extends "base.html" %}
 
 {% block content %}  
-  <div id-"menu">
-   <a href="{{ logout_url|safe }}">Log out</a>
-  </div>
-  <div>
-   <form action="new?list_name={{ list_name }}" method="post">
-    <table>
-     <tr>
-      <td>Task name:</td>
-      <td>Estimate (e.g. 1d 2h 30m)</td>
-      <td></td>
-     </tr>
-     <tr>
-      <td><input type="text" name="task_name" value=""></td>
-      <td><input type="text" name="estimate" value=""></td>
-      <td><input type="submit" value="Create"></td>
-     </tr>
-    </table>
-   </form>
-  </div>
-  <hr>
- {% for task in tasks %}
-  {% if task.state == 0 %}
-  <div class="task in_progress">
-   <a href="/stop?task_key={{ task.key.urlsafe() }}">
-    <div>
-     <img class="clock" alt="clock" src="img/clock.gif">
-  {% else %}
-   {% if task.state == 1 %}
-  <div class="task">
-   {% elif task.state == 2 %}
-  <div class="task finished">
-   {% endif %}
-   <a href="/start?task_key={{ task.key.urlsafe() }}">
-    <div>
-  {% endif %}
-     <span class="name">{{ task.name }}</span>
+  <form action="new?list_name={{ list_name }}" method="post">
+   <div id="form_container">
+    <div id="new_task_form">
+     <div id="form_name" class="form_field">
+      <input id="name_field" type="text" name="task_name">
+     </div>
+     <div id="form_estimate" class="form_field">
+      <input id="estimate_field" type="text" name="estimate">
+     </div>
+     <div id="form_submit" class="form_field">
+      <input id="submit" type="submit" value="Create">
+     </div>
     </div>
-   </a>
-   <div id="{{ task.key.urlsafe() }}" onclick="toggleDetails(this)">
-    <span class="duration">{{ task.duration|duration }} logged (estimate: {{ task.estimate|duration }})</span>
-    <table id="{{ task.key.urlsafe() }}_details">
-     <tr><td>Created:</td><td>{{ task.created|datetime }}</td></tr>
-     <tr><td>Started:</td><td>{{ task.started|datetime }}</td></tr>
-     <tr><td>Last restart:</td><td>{{ task.restarted|datetime }}</td></tr>
-     <tr><td>Finished:</td><td>{{ task.finished|datetime }}</td></tr>
-    </table>
    </div>
-  </div>
+  </form> 
+ 
+  <hr>
+  
+  <div id="index">
+ {% for task in tasks %}
+  {% if task.state == 0 -%}
+   <div class="task in_progress">
+    <a href="/stop?task_key={{ task.key.urlsafe() }}">
+     <div>
+      <img class="clock" alt="clock" src="img/clock.gif">
+  {% else -%}
+   {% if task.state == 1 -%}
+   <div class="task">
+   {% elif task.state == 2 -%}
+   <div class="task finished">
+   {% endif -%}
+    <a href="/start?task_key={{ task.key.urlsafe() }}">
+     <div>
+  {% endif %}
+      <span class="name">{{ task.name }}</span>
+     </div>
+    </a>
+    <div id="{{ task.key.urlsafe() }}" onclick="toggleDetails(this)">
+     <span class="duration">{{ task.duration|duration }} logged (estimate: {{ task.estimate|duration }})</span>
+     <table id="{{ task.key.urlsafe() }}_details">
+      <tr><td>Created:</td><td>{{ task.created|datetime }}</td></tr>
+      <tr><td>Started:</td><td>{{ task.started|datetime }}</td></tr>
+      <tr><td>Last restart:</td><td>{{ task.restarted|datetime }}</td></tr>
+      <tr><td>Finished:</td><td>{{ task.finished|datetime }}</td></tr>
+     </table>
+    </div>
+   </div>
  {% endfor %}
+  </div>
 {% endblock %}
