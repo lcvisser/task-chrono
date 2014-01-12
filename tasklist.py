@@ -130,8 +130,8 @@ class NewTaskHandler(webapp2.RequestHandler):
                 return
             
             # Validate task estimate
-            input_estimate = self.request.get('estimate', '0')
-            if not input_estimate[0].isdigit():
+            input_estimate = self.request.get('estimate', '')
+            if input_estimate == '' or input_estimate[0].isdigit() == False:
                 # Invalid estimate
                 self.redirect('/?' + urllib.urlencode(query_params))
                 return
