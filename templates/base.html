@@ -1,0 +1,27 @@
+<!doctype html>
+{% autoescape true %}
+<head>
+ <meta charset="us-ascii">
+ <meta name="description" content="tasklist">
+ 
+ {% if title %}
+ <title>{{ title }}</title>
+ {% else %}
+ <title>TaskList</title>
+ {% endif %}
+ 
+ <link rel="stylesheet" href="css/tasklist.css">
+ <link rel="stylesheet" media="screen and (min-width: 1201px)" href="css/screen.css">
+ <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/mobile.css">
+ 
+ <script type="text/javascript" src="js/tasklist.js"></script>
+</head>
+
+<body>
+ <div id="wrapper">  
+  {% block content %}
+  {% endblock %}
+ </div>
+</body>
+{% endautoescape %}
+</html>

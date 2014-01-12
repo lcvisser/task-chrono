@@ -1,0 +1,78 @@
+a {
+ color: #000000;
+ text-decoration: none;
+}
+
+a:hover {
+ color: #000000;
+ text-decoration: none;
+}
+
+a:visited {
+ color: #000000;
+ text-decoration: none;
+}
+
+div.task {
+ background: #ffffff;
+ border: 1px solid #ffffff;
+ clear: both;
+ display: block;
+ margin-bottom: 5px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 5px;
+ padding: 2px;
+ position: relative;
+}
+
+div.task:hover {
+ border: 1px solid #000000;
+}
+
+div.task table {
+ display: none;
+}
+
+div.task td {
+ color: #7f7f7f;
+ font-family: Futura, Impact, Helvetica, Arial, sans-serif;
+ font-size: 10px;
+}
+
+div.finished span, div.finished td {
+ color: #cbcbcb;
+}
+
+div.in_progress {
+ background: #c5e6ff;
+}
+
+div#wrapper {
+ border: 1px solid;
+ margin-left: auto;
+ margin-right: auto;
+ padding: 10px;
+ position: relative;
+}
+
+img.clock {
+ float: right;
+ height: 30px;
+ width: 30px;
+ vertical-align: top;
+}
+
+span.duration {
+ color: #7f7f7f;
+ font-family: Futura, Impact, Helvetica, Arial, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+}
+
+span.name {
+ color: #000000;
+ font-family: Futura, Impact, Helvetica, Arial, sans-serif;
+ font-size: 18px;
+ font-weight: bold;
+}
