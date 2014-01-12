@@ -124,7 +124,7 @@ class NewTaskHandler(webapp2.RequestHandler):
             
             # Validate task name
             input_name = self.request.get('task_name', '')
-            if not input_name.isalnum():
+            if input_name == '' or input_name.isspace():
                 # Invalid task name
                 self.redirect('/?' + urllib.urlencode(query_params))
                 return

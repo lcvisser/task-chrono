@@ -41,7 +41,7 @@ div.task table {
 
 div.task td {
  color: #7f7f7f;
- font-size: 10px;
+ font-size: 22px;
 }
 
 div.finished span, div.finished td {
@@ -107,8 +107,10 @@ img.clock {
 input {
  border: 1px solid #000000;
  display: block;
- height: 15px;
+ height: 26px;
  margin: 1px;
+ font-family: Futura, Impact, Helvetica, Arial, sans-serif;
+ font-size: 22px;
 }
 
 input#name_field {
@@ -116,22 +118,23 @@ input#name_field {
 }
 
 input#estimate_field {
- width: 200px;
+ width: 375px;
 }
 
 #submit {
- height: 19px;
- width: 50px;
+ height: 30px;
+ width: 100px;
+ padding: 0px;
 }
 
 span.duration {
  color: #7f7f7f;
- font-size: 12px;
+ font-size: 24px;
  font-weight: bold;
 }
 
 span.name {
  color: #000000;
- font-size: 18px;
+ font-size: 30px;
  font-weight: bold;
 }
