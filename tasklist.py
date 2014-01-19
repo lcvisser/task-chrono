@@ -165,6 +165,22 @@ class NewTaskHandler(webapp2.RequestHandler):
             self.redirect('/?' + urllib.urlencode(query_params))
 
 
+# Handler for deleting a task
+class DeleteTaskHandler(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        if not user:
+            # Login is required, redirect to login page
+            self.redirect(users.create_login_url('/'))
+        else:
+            # DElete task
+            task_key = ndb.Key(urlsafe=self.request.get('task_key'))
+            task_key.delete()
+            
+            # Redirect to main page
+            self.redirect('/')
+
+
 # Handler for (re-)starting a task
 class StartTaskHandler(webapp2.RequestHandler):
     def get(self):
