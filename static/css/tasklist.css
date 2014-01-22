@@ -104,6 +104,13 @@ img.clock {
  vertical-align: top;
 }
 
+img.delete {
+ height: 16px;
+ width: 16px;
+ padding-right: 5px;
+ vertical-align: middle;
+}
+
 input {
  border: 1px solid #000000;
  display: block;

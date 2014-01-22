@@ -245,6 +245,7 @@ class StopTaskHandler(webapp2.RequestHandler):
 application = webapp2.WSGIApplication(
     [('/', MainPage),
      ('/new', NewTaskHandler),
+     ('/delete', DeleteTaskHandler),
      ('/start', StartTaskHandler),
      ('/stop', StopTaskHandler)
     ], debug=False)

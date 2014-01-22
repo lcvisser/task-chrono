@@ -40,12 +40,15 @@
     </a>
     <div id="{{ task.key.urlsafe() }}" onclick="toggleDetails(this)">
      <span class="duration">{{ task.duration|duration }} logged (estimate: {{ task.estimate|duration }})</span>
-     <table id="{{ task.key.urlsafe() }}_details">
-      <tr><td>Created:</td><td>{{ task.created|datetime }}</td></tr>
-      <tr><td>Started:</td><td>{{ task.started|datetime }}</td></tr>
-      <tr><td>Last restart:</td><td>{{ task.restarted|datetime }}</td></tr>
-      <tr><td>Finished:</td><td>{{ task.finished|datetime }}</td></tr>
-     </table>
+     <div>
+      <table id="{{ task.key.urlsafe() }}_details">
+       <tr><td>Created:</td><td>{{ task.created|datetime }}</td></tr>
+       <tr><td>Started:</td><td>{{ task.started|datetime }}</td></tr>
+       <tr><td>Last restart:</td><td>{{ task.restarted|datetime }}</td></tr>
+       <tr><td>Finished:</td><td>{{ task.finished|datetime }}</td></tr>
+       <tr><td colspan="2"><a href="/delete?task_key={{ task.key.urlsafe() }}"><img class="delete" alt="delete" src="img/delete.png">delete task</a></td></tr>
+      </table>
+     </div>
     </div>
    </div>
  {% endfor %}
