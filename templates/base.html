@@ -10,8 +10,8 @@
  <title>task-chrono</title>
  {% endif %}
  
- <link rel="stylesheet" href="css/tasklist.css">
- <link rel="stylesheet" media="screen and (min-width: 1201px)" href="css/screen.css">
+ <link rel="stylesheet" href="css/main.css">
+ <link rel="stylesheet" media="screen and (min-width: 1201px)" href="css/desktop.css">
  <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/mobile.css">
  
  <script type="text/javascript" src="js/tasklist.js"></script>
@@ -21,7 +21,7 @@
  <div id="wrapper"> 
   <div id="menu">
    <div class="menu_item {% if page == 'list' -%}menu_item_active{%- else -%}menu_item_inactive{%- endif -%}">
-    <a href="#">List</a>
+    <a href="/?list_name={{ list_name }}">List</a>
    </div>
    <div class="menu_item">
     <a href="#">Stats</a>
