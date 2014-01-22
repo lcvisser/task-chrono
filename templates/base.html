@@ -20,7 +20,18 @@
 <body onload="setEventHandlers()">
  <div id="wrapper"> 
   <div id="menu">
-   <a href="{{ logout_url|safe }}">Log out</a>
+   <div class="menu_item {% if page == 'list' -%}menu_item_active{%- else -%}menu_item_inactive{%- endif -%}">
+    <a href="#">List</a>
+   </div>
+   <div class="menu_item">
+    <a href="#">Stats</a>
+   </div>
+   <div class="menu_item">
+    <a href="#">Settings</a>
+   </div>
+   <div class="menu_item">
+    <a href="{{ logout_url|safe }}">Log out</a>
+   </div>
   </div>
   
   <hr> 

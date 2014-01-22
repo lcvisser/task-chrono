@@ -101,6 +101,7 @@ class MainPage(webapp2.RequestHandler):
             # Create template context
             context = {
                 'list_name': DEFAULT_LIST_NAME,
+                'page': 'list',
                 'tasks': tasks,
                 'logout_url': users.create_logout_url(self.request.uri)}
             
