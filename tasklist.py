@@ -110,6 +110,29 @@ class MainPage(webapp2.RequestHandler):
             self.response.write(template.render(context))
 
 
+# Stats page request handler
+class StatsPage(webapp2.RequestHandler):
+    def get(self):        
+        user = users.get_current_user()
+        if not user:
+            # Login is required, redirect to login page
+            self.redirect(users.create_login_url(self.request.uri))
+        else:
+            # Get key for requested list
+            list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
+            list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
+            
+            # Create template context
+            context = {
+                'list_name': DEFAULT_LIST_NAME,
+                'page': 'stats',
+                'logout_url': users.create_logout_url(self.request.uri)}
+            
+            # Parse and serve template
+            template = JINJA.get_template('stats.html')
+            self.response.write(template.render(context))
+
+
 # Handler for creating a new task
 class NewTaskHandler(webapp2.RequestHandler):
     def post(self):
@@ -245,6 +268,7 @@ class StopTaskHandler(webapp2.RequestHandler):
 # Application instance
 application = webapp2.WSGIApplication(
     [('/', MainPage),
+     ('/stats', StatsPage),
      ('/new', NewTaskHandler),
      ('/delete', DeleteTaskHandler),
      ('/start', StartTaskHandler),
