@@ -14,7 +14,8 @@ import webapp2
 
 from google.appengine.api import users
 from google.appengine.ext import ndb
-
+from google.appengine.ext.webapp.util import login_required
+from webapp2_extras.appengine.users import login_required
 
 # Formatter function for date/time
 DATETIME_FORMAT = '%H:%M:%S %Y-%m-%d'
@@ -84,53 +85,47 @@ class Task(ndb.Model):
 
 # Main page request handler
 class MainPage(webapp2.RequestHandler):
-    def get(self):        
+    @login_required
+    def get(self):
+        # Get key for requested list
         user = users.get_current_user()
-        if not user:
-            # Login is required, redirect to login page
-            self.redirect(users.create_login_url(self.request.uri))
-        else:
-            # Get key for requested list
-            list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
-            list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
-            
-            # Get tasks for list, order by priority and creation date
-            task_query = Task.query(ancestor=list_key).order(Task.state, -Task.created)
-            tasks = task_query.fetch()
-            
-            # Create template context
-            context = {
-                'list_name': DEFAULT_LIST_NAME,
-                'page': 'list',
-                'tasks': tasks,
-                'logout_url': users.create_logout_url(self.request.uri)}
-            
-            # Parse and serve template
-            template = JINJA.get_template('index.html')
-            self.response.write(template.render(context))
+        list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
+        list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
+        
+        # Get tasks for list, order by priority and creation date
+        task_query = Task.query(ancestor=list_key).order(Task.state, -Task.created)
+        tasks = task_query.fetch()
+        
+        # Create template context
+        context = {
+            'list_name': DEFAULT_LIST_NAME,
+            'page': 'list',
+            'tasks': tasks,
+            'logout_url': users.create_logout_url('/')}
+        
+        # Parse and serve template
+        template = JINJA.get_template('index.html')
+        self.response.write(template.render(context))
 
 
 # Stats page request handler
 class StatsPage(webapp2.RequestHandler):
-    def get(self):        
+    @login_required
+    def get(self):
+        # Get key for requested list
         user = users.get_current_user()
-        if not user:
-            # Login is required, redirect to login page
-            self.redirect(users.create_login_url(self.request.uri))
-        else:
-            # Get key for requested list
-            list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
-            list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
-            
-            # Create template context
-            context = {
-                'list_name': DEFAULT_LIST_NAME,
-                'page': 'stats',
-                'logout_url': users.create_logout_url(self.request.uri)}
-            
-            # Parse and serve template
-            template = JINJA.get_template('stats.html')
-            self.response.write(template.render(context))
+        list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
+        list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
+        
+        # Create template context
+        context = {
+            'list_name': DEFAULT_LIST_NAME,
+            'page': 'stats',
+            'logout_url': users.create_logout_url(self.request.uri)}
+        
+        # Parse and serve template
+        template = JINJA.get_template('stats.html')
+        self.response.write(template.render(context))
 
 
 # Handler for creating a new task
@@ -191,78 +186,66 @@ class NewTaskHandler(webapp2.RequestHandler):
 
 # Handler for deleting a task
 class DeleteTaskHandler(webapp2.RequestHandler):
+    @login_required
     def get(self):
-        user = users.get_current_user()
-        if not user:
-            # Login is required, redirect to login page
-            self.redirect(users.create_login_url('/'))
-        else:
-            # DElete task
-            task_key = ndb.Key(urlsafe=self.request.get('task_key'))
-            task_key.delete()
-            
-            # Redirect to main page
-            self.redirect('/')
+        # Delete task
+        task_key = ndb.Key(urlsafe=self.request.get('task_key'))
+        task_key.delete()
+        
+        # Redirect to main page
+        self.redirect('/')
 
 
 # Handler for (re-)starting a task
 class StartTaskHandler(webapp2.RequestHandler):
+    @login_required
     def get(self):
-        user = users.get_current_user()
-        if not user:
-            # Login is required, redirect to login page
-            self.redirect(users.create_login_url('/'))
-        else:
-            # Get requested task
-            task_key = ndb.Key(urlsafe=self.request.get('task_key'))
-            task = task_key.get()
+        # Get requested task
+        task_key = ndb.Key(urlsafe=self.request.get('task_key'))
+        task = task_key.get()
+        
+        # Set timestamps
+        if task.state in (STATE_NEW, STATE_FINISHED):
+            now = datetime.datetime.utcnow()
+            if task.started is None:
+                # Task was not started before
+                task.started = now
             
-            # Set timestamps
-            if task.state in (STATE_NEW, STATE_FINISHED):
-                now = datetime.datetime.utcnow()
-                if task.started is None:
-                    # Task was not started before
-                    task.started = now
-                
-                # Set task state to "in progress"
-                task.restarted = now
-                task.state = STATE_IN_PROGRESS
-                task.put()
-            
-            # Redirect to main page
-            self.redirect('/')
+            # Set task state to "in progress"
+            task.restarted = now
+            task.state = STATE_IN_PROGRESS
+            task.put()
+        
+        # Redirect to main page
+        self.redirect('/')
 
 
 # Handler for stopping a task
 class StopTaskHandler(webapp2.RequestHandler):
+    @login_required
     def get(self):
-        user = users.get_current_user()
-        if not user:
-            # Login is required, redirect to login page
-            self.redirect(users.create_login_url('/'))
-        else:
-            # Get requested task
-            task_key = ndb.Key(urlsafe=self.request.get('task_key'))
-            task = task_key.get()
+        # Get requested task
+        task_key = ndb.Key(urlsafe=self.request.get('task_key'))
+        task = task_key.get()
+        
+        # Set timestamp
+        if task.state == STATE_IN_PROGRESS:
+            now = datetime.datetime.utcnow()
+            task.finished = now
             
-            # Set timestamp
-            if task.state == STATE_IN_PROGRESS:
-                now = datetime.datetime.utcnow()
-                task.finished = now
-                
-                # Calculate duration (rounded to seconds)
-                duration_increment = now - task.restarted
-                duration_increment -= datetime.timedelta(
-                    microseconds=duration_increment.microseconds)
-                duration = task.duration + int(duration_increment.total_seconds())
-                task.duration = duration
-                
-                # Set task state to "finished"
-                task.state = STATE_FINISHED
-                task.put()
+            # Calculate duration (rounded to seconds)
+            duration_increment = now - task.restarted
+            duration_increment -= datetime.timedelta(
+                microseconds=duration_increment.microseconds)
+            duration = task.duration + int(duration_increment.total_seconds())
+            task.duration = duration
             
-            # Redirect to main page
-            self.redirect('/')
+            # Set task state to "finished"
+            task.state = STATE_FINISHED
+            task.put()
+        
+        # Redirect to main page
+        self.redirect('/')
 
 
 # Application instance
