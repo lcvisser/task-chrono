@@ -15,21 +15,8 @@ import webapp2
 from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
-from webapp2_extras.appengine.users import login_required
 
-# Formatter function for date/time
-DATETIME_FORMAT = '%H:%M:%S %Y-%m-%d'
-def format_datetime(dt, format='medium'):
-    if dt is not None:
-        r = dt.strftime(DATETIME_FORMAT)
-    else:
-        r = ''
-    
-    return r
-    
-# Formatter function for durations
-def format_duration(value, format='medium'):
-    return str(datetime.timedelta(seconds=value))
+from util import format_datetime, format_duration, dynamic_png
 
 
 # Configure Jinja2 environment
@@ -117,10 +104,13 @@ class StatsPage(webapp2.RequestHandler):
         list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
         list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
         
+        rv = dynamic_png()
+        
         # Create template context
         context = {
             'list_name': DEFAULT_LIST_NAME,
             'page': 'stats',
+            'estimation_png': rv,
             'logout_url': users.create_logout_url(self.request.uri)}
         
         # Parse and serve template
@@ -248,12 +238,11 @@ class StopTaskHandler(webapp2.RequestHandler):
         self.redirect('/')
 
 
-# Application instance
 application = webapp2.WSGIApplication(
     [('/', MainPage),
-     ('/stats', StatsPage),
-     ('/new', NewTaskHandler),
-     ('/delete', DeleteTaskHandler),
-     ('/start', StartTaskHandler),
-     ('/stop', StopTaskHandler)
-    ], debug=False)
+    ('/stats', StatsPage),
+    ('/new', NewTaskHandler),
+    ('/delete', DeleteTaskHandler),
+    ('/start', StartTaskHandler),
+    ('/stop', StopTaskHandler)
+    ], debug=True)
