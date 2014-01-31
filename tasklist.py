@@ -16,7 +16,8 @@ from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
-from util import format_datetime, format_duration, dynamic_png
+from util import format_datetime, format_duration
+from util import generate_est_png
 
 
 # Configure Jinja2 environment
@@ -104,13 +105,15 @@ class StatsPage(webapp2.RequestHandler):
         list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
         list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
         
-        rv = dynamic_png()
+        # Get task duration and estimates
+        durations = [1, 2, 3, 4, 5]
+        estimates = [2, 2, 3, 3, 4]
         
         # Create template context
         context = {
             'list_name': DEFAULT_LIST_NAME,
             'page': 'stats',
-            'estimation_png': rv,
+            'estimation_png': generate_est_png(),
             'logout_url': users.create_logout_url(self.request.uri)}
         
         # Parse and serve template

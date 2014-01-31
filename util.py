@@ -16,6 +16,7 @@ import numpy
 os.environ['MATPLOTLIBDATA'] = os.getcwdu()
 os.environ['MPLCONFIGDIR'] = os.getcwdu()
 
+# Disable subprocess for matplotlib; not available on GAE
 def no_popen(*args, **kwargs):
     raise OSError('popen not available')
 subprocess.Popen = no_popen
@@ -46,20 +47,18 @@ def format_duration(value, format='medium'):
     return str(datetime.timedelta(seconds=value))
 
 
-
-
-
-def dynamic_png():
+# PNG generator for estimation statistics
+def generate_est_png():
     if mpl_available:
         plt.title("Dynamic PNG")
         for i in range(5): plt.plot(sorted(numpy.random.randn(25)))
         rv = sio.StringIO()
         plt.savefig(rv, format="png")
         plt.clf()
-        return rv.getvalue().encode("base64").strip()
+        return rv.getvalue().encode('base64').strip()
     else:
-        return None
+        return ''
 
 
 if __name__ == "__main__":
-    print dynamic_png()
+    pass
