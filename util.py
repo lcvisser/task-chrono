@@ -33,17 +33,16 @@ except ImportError:
 
 
 # Formatter function for date/time
-DATETIME_FORMAT = '%H:%M:%S %Y-%m-%d'
-def format_datetime(dt, format='medium'):
+def format_datetime(dt, format='%H:%M:%S %Y-%m-%d'):
     if dt is not None:
-        r = dt.strftime(DATETIME_FORMAT)
+        r = dt.strftime(format)
     else:
         r = ''
     
     return r
     
 # Formatter function for durations
-def format_duration(value, format='medium'):
+def format_duration(value):
     return str(datetime.timedelta(seconds=value))
 
 
