@@ -43,40 +43,49 @@ function handleFocusEvent(elem, label, color) {
 }
 
 function updateTimers() {
+    // Get all tasks that are labeled in progress
     var tasks = document.getElementsByClassName('task in_progress');
     if (tasks.length > 0) {
+        // Update timers for each task that is in progress
         for (var i = 0; i < tasks.length; i++) {
+            // Get current time
             var elem = tasks[i].getElementsByClassName('duration');
             var s = elem[0].innerHTML.split(':');
             var hours = parseInt(s[0], 10);
             var mins = parseInt(s[1]);
             var secs = parseInt(s[2]);
             
+            // Update seconds
             secs += 1;
             if (secs >= 60) {
                 secs -= 60;
                 mins += 1;
             }
             
+            // Update hours
             if (mins >= 60) {
                 mins -= 60;
                 hours += 1;
             }
             
+            // Convert hours to string representation
             var hours_str = hours.toString();
-            var mins_str = '';
-            var secs_str = '';
-            
+
+            // Convert minutes to string representation            
+            var mins_str = '';            
             if (mins < 10) {
                 mins_str = '0';
             }
             mins_str += mins.toString();
-            
+
+            // Convert seconds to string representation
+            var secs_str = '';            
             if (secs < 10) {
                 secs_str = '0';
             }
             secs_str += secs.toString();
             
+            // Update element
             elem[0].innerHTML = hours_str + ':' + mins_str + ':' + secs_str;
         }
     }
