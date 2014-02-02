@@ -2092,16 +2092,16 @@ NtRp414
 g12
 g18
 sg14
-S'Apple Color Emoji'
+S'YuMincho'
 p416
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Apple Color Emoji.ttf'
+S'/Library/Fonts/Yu Mincho Demibold.otf'
 p417
 sg22
 g23
@@ -2113,16 +2113,16 @@ NtRp418
 g12
 g18
 sg14
-S'YuMincho'
+S'STFangsong'
 p420
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Yu Mincho Demibold.otf'
+S'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe4\xbb\xbf\xe5\xae\x8b.ttf'
 p421
 sg22
 g23
@@ -2132,9 +2132,9 @@ g9
 NtRp422
 (dp423
 g12
-g18
+g13
 sg14
-S'STFangsong'
+S'Arial'
 p424
 sg16
 I400
@@ -2143,7 +2143,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe4\xbb\xbf\xe5\xae\x8b.ttf'
+S'/Library/Fonts/Arial Italic.ttf'
 p425
 sg22
 g23
@@ -2153,18 +2153,18 @@ g9
 NtRp426
 (dp427
 g12
-g13
+g18
 sg14
-S'Arial'
+S'Hiragino Kaku Gothic Std'
 p428
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Arial Italic.ttf'
+S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 Std W8.otf'
 p429
 sg22
 g23
@@ -2176,16 +2176,16 @@ NtRp430
 g12
 g18
 sg14
-S'Hiragino Kaku Gothic Std'
+S'LiSong Pro'
 p432
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 Std W8.otf'
+S'/Library/Fonts/\xe5\x84\xb7\xe5\xae\x8b Pro.ttf'
 p433
 sg22
 g23
@@ -2197,7 +2197,7 @@ NtRp434
 g12
 g18
 sg14
-S'LiSong Pro'
+S'Hiragino Maru Gothic Pro'
 p436
 sg16
 I400
@@ -2206,7 +2206,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe5\x84\xb7\xe5\xae\x8b Pro.ttf'
+S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe4\xb8\xb8\xe3\x82\xb3\xe3\x82\x99 Pro W4.otf'
 p437
 sg22
 g23
@@ -2216,18 +2216,18 @@ g9
 NtRp438
 (dp439
 g12
-g18
+g13
 sg14
-S'Hiragino Maru Gothic Pro'
+S'STIXNonUnicode'
 p440
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe4\xb8\xb8\xe3\x82\xb3\xe3\x82\x99 Pro W4.otf'
+S'/Library/Fonts/STIXNonUniBolIta.otf'
 p441
 sg22
 g23
@@ -2237,18 +2237,18 @@ g9
 NtRp442
 (dp443
 g12
-g13
+g18
 sg14
-S'STIXNonUnicode'
+S'Apple Braille'
 p444
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXNonUniBolIta.otf'
+S'/System/Library/Fonts/Apple Braille Pinpoint 8 Dot.ttf'
 p445
 sg22
 g23
@@ -2258,9 +2258,9 @@ g9
 NtRp446
 (dp447
 g12
-g18
+g13
 sg14
-S'Apple Braille'
+S'Georgia'
 p448
 sg16
 I400
@@ -2269,7 +2269,7 @@ g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Apple Braille Pinpoint 8 Dot.ttf'
+S'/Library/Fonts/Georgia Italic.ttf'
 p449
 sg22
 g23
@@ -2279,9 +2279,9 @@ g9
 NtRp450
 (dp451
 g12
-g13
+g18
 sg14
-S'Georgia'
+S'Apple Braille'
 p452
 sg16
 I400
@@ -2290,7 +2290,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Georgia Italic.ttf'
+S'/System/Library/Fonts/Apple Braille Outline 6 Dot.ttf'
 p453
 sg22
 g23
@@ -2302,7 +2302,7 @@ NtRp454
 g12
 g18
 sg14
-S'Apple Braille'
+S'Chalkduster'
 p456
 sg16
 I400
@@ -2311,7 +2311,7 @@ g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Apple Braille Outline 6 Dot.ttf'
+S'/Library/Fonts/Chalkduster.ttf'
 p457
 sg22
 g23
@@ -2321,18 +2321,18 @@ g9
 NtRp458
 (dp459
 g12
-g18
+g13
 sg14
-S'Chalkduster'
+S'Courier New'
 p460
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Chalkduster.ttf'
+S'/Library/Fonts/Courier New Bold Italic.ttf'
 p461
 sg22
 g23
@@ -2342,18 +2342,18 @@ g9
 NtRp462
 (dp463
 g12
-g13
+g18
 sg14
-S'Courier New'
+S'Wawati SC'
 p464
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Courier New Bold Italic.ttf'
+S'/Library/Fonts/WawaSC-Regular.otf'
 p465
 sg22
 g23
@@ -2365,16 +2365,16 @@ NtRp466
 g12
 g18
 sg14
-S'Wawati SC'
+S'Arial Rounded MT Bold'
 p468
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/WawaSC-Regular.otf'
+S'/Library/Fonts/Arial Rounded Bold.ttf'
 p469
 sg22
 g23
@@ -2386,7 +2386,7 @@ NtRp470
 g12
 g18
 sg14
-S'Arial Rounded MT Bold'
+S'Devanagari MT'
 p472
 sg16
 I700
@@ -2395,7 +2395,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Arial Rounded Bold.ttf'
+S'/Library/Fonts/DevanagariMTBold.ttf'
 p473
 sg22
 g23
@@ -2410,13 +2410,13 @@ sg14
 S'Devanagari MT'
 p476
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/DevanagariMTBold.ttf'
+S'/Library/Fonts/DevanagariMT.ttf'
 p477
 sg22
 g23
@@ -2428,7 +2428,7 @@ NtRp478
 g12
 g18
 sg14
-S'Devanagari MT'
+S'PCMyungjo'
 p480
 sg16
 I400
@@ -2437,7 +2437,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/DevanagariMT.ttf'
+S'/Library/Fonts/PCmyoungjo.ttf'
 p481
 sg22
 g23
@@ -2449,7 +2449,7 @@ NtRp482
 g12
 g18
 sg14
-S'PCMyungjo'
+S'LastResort'
 p484
 sg16
 I400
@@ -2458,7 +2458,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/PCmyoungjo.ttf'
+S'/System/Library/Fonts/LastResort.ttf'
 p485
 sg22
 g23
@@ -2470,16 +2470,16 @@ NtRp486
 g12
 g18
 sg14
-S'LastResort'
+S'Apple SD Gothic Neo'
 p488
 sg16
-I400
+I200
 sg17
 g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/LastResort.ttf'
+S'/Library/Fonts/AppleSDGothicNeo-Light.otf'
 p489
 sg22
 g23
@@ -2491,16 +2491,16 @@ NtRp490
 g12
 g18
 sg14
-S'Apple SD Gothic Neo'
+S'Al Bayan'
 p492
 sg16
-I200
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/AppleSDGothicNeo-Light.otf'
+S'/Library/Fonts/AlBayan.ttf'
 p493
 sg22
 g23
@@ -2510,18 +2510,18 @@ g9
 NtRp494
 (dp495
 g12
-g18
+g13
 sg14
-S'Al Bayan'
+S'Verdana'
 p496
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/AlBayan.ttf'
+S'/Library/Fonts/Verdana Bold Italic.ttf'
 p497
 sg22
 g23
@@ -2531,9 +2531,9 @@ g9
 NtRp498
 (dp499
 g12
-g13
+g18
 sg14
-S'Verdana'
+S'Hiragino Sans GB'
 p500
 sg16
 I700
@@ -2542,7 +2542,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Verdana Bold Italic.ttf'
+S'/Library/Fonts/Hiragino Sans GB W6.otf'
 p501
 sg22
 g23
@@ -2554,16 +2554,16 @@ NtRp502
 g12
 g18
 sg14
-S'Hiragino Sans GB'
+S'Kailasa'
 p504
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Hiragino Sans GB W6.otf'
+S'/Library/Fonts/Kailasa.ttf'
 p505
 sg22
 g23
@@ -2575,7 +2575,7 @@ NtRp506
 g12
 g18
 sg14
-S'Kailasa'
+S'STIXIntegralsSm'
 p508
 sg16
 I400
@@ -2584,7 +2584,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Kailasa.ttf'
+S'/Library/Fonts/STIXIntSmReg.otf'
 p509
 sg22
 g23
@@ -2596,7 +2596,7 @@ NtRp510
 g12
 g18
 sg14
-S'STIXIntegralsSm'
+S'Apple SD Gothic Neo'
 p512
 sg16
 I400
@@ -2605,7 +2605,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXIntSmReg.otf'
+S'/Library/Fonts/AppleSDGothicNeo-Thin.otf'
 p513
 sg22
 g23
@@ -2617,7 +2617,7 @@ NtRp514
 g12
 g18
 sg14
-S'Apple SD Gothic Neo'
+S'Kokonor'
 p516
 sg16
 I400
@@ -2626,7 +2626,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/AppleSDGothicNeo-Thin.otf'
+S'/Library/Fonts/Kokonor.ttf'
 p517
 sg22
 g23
@@ -2638,16 +2638,16 @@ NtRp518
 g12
 g18
 sg14
-S'Kokonor'
+S'Geeza Pro'
 p520
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Kokonor.ttf'
+S'/System/Library/Fonts/Geeza Pro Bold.ttf'
 p521
 sg22
 g23
@@ -2657,18 +2657,18 @@ g9
 NtRp522
 (dp523
 g12
-g18
+g13
 sg14
-S'Geeza Pro'
+S'Verdana'
 p524
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Geeza Pro Bold.ttf'
+S'/Library/Fonts/Verdana Italic.ttf'
 p525
 sg22
 g23
@@ -2678,18 +2678,18 @@ g9
 NtRp526
 (dp527
 g12
-g13
+g18
 sg14
-S'Verdana'
+S'STIXGeneral'
 p528
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Verdana Italic.ttf'
+S'/Library/Fonts/STIXGeneralBol.otf'
 p529
 sg22
 g23
@@ -2701,16 +2701,16 @@ NtRp530
 g12
 g18
 sg14
-S'STIXGeneral'
+S'Apple Braille'
 p532
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXGeneralBol.otf'
+S'/System/Library/Fonts/Apple Braille.ttf'
 p533
 sg22
 g23
@@ -2722,16 +2722,16 @@ NtRp534
 g12
 g18
 sg14
-S'Apple Braille'
+S'Hiragino Mincho Pro'
 p536
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Apple Braille.ttf'
+S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe6\x98\x8e\xe6\x9c\x9d Pro W6.otf'
 p537
 sg22
 g23
@@ -2743,16 +2743,16 @@ NtRp538
 g12
 g18
 sg14
-S'Hiragino Mincho Pro'
+S'InaiMathi'
 p540
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe6\x98\x8e\xe6\x9c\x9d Pro W6.otf'
+S'/Library/Fonts/InaiMathi.ttf'
 p541
 sg22
 g23
@@ -2764,16 +2764,16 @@ NtRp542
 g12
 g18
 sg14
-S'InaiMathi'
+S'Weibei TC'
 p544
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/InaiMathi.ttf'
+S'/Library/Fonts/WeibeiTC-Bold.otf'
 p545
 sg22
 g23
@@ -2785,16 +2785,16 @@ NtRp546
 g12
 g18
 sg14
-S'Weibei TC'
+S'STIXNonUnicode'
 p548
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/WeibeiTC-Bold.otf'
+S'/Library/Fonts/STIXNonUni.otf'
 p549
 sg22
 g23
@@ -2806,7 +2806,7 @@ NtRp550
 g12
 g18
 sg14
-S'STIXNonUnicode'
+S'STIXIntegralsD'
 p552
 sg16
 I400
@@ -2815,7 +2815,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXNonUni.otf'
+S'/Library/Fonts/STIXIntDReg.otf'
 p553
 sg22
 g23
@@ -2825,9 +2825,9 @@ g9
 NtRp554
 (dp555
 g12
-g18
+g13
 sg14
-S'STIXIntegralsD'
+S'STIXNonUnicode'
 p556
 sg16
 I400
@@ -2836,7 +2836,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXIntDReg.otf'
+S'/Library/Fonts/STIXNonUniIta.otf'
 p557
 sg22
 g23
@@ -2846,9 +2846,9 @@ g9
 NtRp558
 (dp559
 g12
-g13
+g18
 sg14
-S'STIXNonUnicode'
+S'Baghdad'
 p560
 sg16
 I400
@@ -2857,7 +2857,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXNonUniIta.otf'
+S'/Library/Fonts/Baghdad.ttf'
 p561
 sg22
 g23
@@ -2869,7 +2869,7 @@ NtRp562
 g12
 g18
 sg14
-S'Baghdad'
+S'STIXIntegralsUp'
 p564
 sg16
 I400
@@ -2878,7 +2878,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Baghdad.ttf'
+S'/Library/Fonts/STIXIntUpReg.otf'
 p565
 sg22
 g23
@@ -2890,7 +2890,7 @@ NtRp566
 g12
 g18
 sg14
-S'STIXIntegralsUp'
+S'Yuppy SC'
 p568
 sg16
 I400
@@ -2899,7 +2899,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXIntUpReg.otf'
+S'/Library/Fonts/YuppySC-Regular.otf'
 p569
 sg22
 g23
@@ -2911,16 +2911,16 @@ NtRp570
 g12
 g18
 sg14
-S'Yuppy SC'
+S'Comic Sans MS'
 p572
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/YuppySC-Regular.otf'
+S'/Library/Fonts/Comic Sans MS Bold.ttf'
 p573
 sg22
 g23
@@ -2932,16 +2932,16 @@ NtRp574
 g12
 g18
 sg14
-S'Comic Sans MS'
+S'Trebuchet MS'
 p576
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Comic Sans MS Bold.ttf'
+S'/Library/Fonts/Trebuchet MS.ttf'
 p577
 sg22
 g23
@@ -2953,16 +2953,16 @@ NtRp578
 g12
 g18
 sg14
-S'Trebuchet MS'
+S'Courier New'
 p580
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Trebuchet MS.ttf'
+S'/Library/Fonts/Courier New Bold.ttf'
 p581
 sg22
 g23
@@ -2974,16 +2974,16 @@ NtRp582
 g12
 g18
 sg14
-S'Courier New'
+S'Big Caslon'
 p584
 sg16
-I700
+I500
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Courier New Bold.ttf'
+S'/Library/Fonts/BigCaslon.ttf'
 p585
 sg22
 g23
@@ -2995,16 +2995,16 @@ NtRp586
 g12
 g18
 sg14
-S'Big Caslon'
+S'Ayuthaya'
 p588
 sg16
-I500
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/BigCaslon.ttf'
+S'/Library/Fonts/Ayuthaya.ttf'
 p589
 sg22
 g23
@@ -3016,16 +3016,16 @@ NtRp590
 g12
 g18
 sg14
-S'Ayuthaya'
+S'Apple SD Gothic Neo'
 p592
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Ayuthaya.ttf'
+S'/Library/Fonts/AppleSDGothicNeo-SemiBold.otf'
 p593
 sg22
 g23
@@ -3037,16 +3037,16 @@ NtRp594
 g12
 g18
 sg14
-S'Apple SD Gothic Neo'
+S'Herculanum'
 p596
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/AppleSDGothicNeo-SemiBold.otf'
+S'/Library/Fonts/Herculanum.ttf'
 p597
 sg22
 g23
@@ -3058,7 +3058,7 @@ NtRp598
 g12
 g18
 sg14
-S'Herculanum'
+S'DecoType Naskh'
 p600
 sg16
 I400
@@ -3067,7 +3067,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Herculanum.ttf'
+S'/Library/Fonts/DecoTypeNaskh.ttf'
 p601
 sg22
 g23
@@ -3079,7 +3079,7 @@ NtRp602
 g12
 g18
 sg14
-S'DecoType Naskh'
+S'Apple Braille'
 p604
 sg16
 I400
@@ -3088,7 +3088,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/DecoTypeNaskh.ttf'
+S'/System/Library/Fonts/Apple Braille Pinpoint 6 Dot.ttf'
 p605
 sg22
 g23
@@ -3100,16 +3100,16 @@ NtRp606
 g12
 g18
 sg14
-S'Apple Braille'
+S'Hiragino Kaku Gothic Pro'
 p608
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Apple Braille Pinpoint 6 Dot.ttf'
+S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 Pro W6.otf'
 p609
 sg22
 g23
@@ -3121,16 +3121,16 @@ NtRp610
 g12
 g18
 sg14
-S'Hiragino Kaku Gothic Pro'
+S'Symbol'
 p612
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 Pro W6.otf'
+S'/System/Library/Fonts/Symbol.ttf'
 p613
 sg22
 g23
@@ -3140,18 +3140,18 @@ g9
 NtRp614
 (dp615
 g12
-g18
+g13
 sg14
-S'Symbol'
+S'Trebuchet MS'
 p616
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Symbol.ttf'
+S'/Library/Fonts/Trebuchet MS Bold Italic.ttf'
 p617
 sg22
 g23
@@ -3161,18 +3161,18 @@ g9
 NtRp618
 (dp619
 g12
-g13
+g18
 sg14
-S'Trebuchet MS'
+S'Apple SD Gothic Neo'
 p620
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Trebuchet MS Bold Italic.ttf'
+S'/System/Library/Fonts/AppleSDGothicNeo-Regular.otf'
 p621
 sg22
 g23
@@ -3184,16 +3184,16 @@ NtRp622
 g12
 g18
 sg14
-S'Apple SD Gothic Neo'
+S'Al Bayan'
 p624
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/AppleSDGothicNeo-Regular.otf'
+S'/Library/Fonts/AlBayanBold.ttf'
 p625
 sg22
 g23
@@ -3205,16 +3205,16 @@ NtRp626
 g12
 g18
 sg14
-S'Al Bayan'
+S'Wingdings 2'
 p628
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/AlBayanBold.ttf'
+S'/Library/Fonts/Wingdings 2.ttf'
 p629
 sg22
 g23
@@ -3226,7 +3226,7 @@ NtRp630
 g12
 g18
 sg14
-S'Wingdings 2'
+S'HeadLineA'
 p632
 sg16
 I400
@@ -3235,7 +3235,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Wingdings 2.ttf'
+S'/Library/Fonts/HeadlineA.ttf'
 p633
 sg22
 g23
@@ -3247,7 +3247,7 @@ NtRp634
 g12
 g18
 sg14
-S'HeadLineA'
+S'Tahoma'
 p636
 sg16
 I400
@@ -3256,7 +3256,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/HeadlineA.ttf'
+S'/Library/Fonts/Tahoma.ttf'
 p637
 sg22
 g23
@@ -3266,9 +3266,9 @@ g9
 NtRp638
 (dp639
 g12
-g18
+g13
 sg14
-S'Tahoma'
+S'Brush Script MT'
 p640
 sg16
 I400
@@ -3277,7 +3277,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Tahoma.ttf'
+S'/Library/Fonts/Brush Script.ttf'
 p641
 sg22
 g23
@@ -3287,9 +3287,9 @@ g9
 NtRp642
 (dp643
 g12
-g13
+g18
 sg14
-S'Brush Script MT'
+S'.Keyboard'
 p644
 sg16
 I400
@@ -3298,7 +3298,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Brush Script.ttf'
+S'/System/Library/Fonts/Keyboard.ttf'
 p645
 sg22
 g23
@@ -3310,7 +3310,7 @@ NtRp646
 g12
 g18
 sg14
-S'.Keyboard'
+S'Hiragino Maru Gothic ProN'
 p648
 sg16
 I400
@@ -3319,7 +3319,7 @@ g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Keyboard.ttf'
+S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe4\xb8\xb8\xe3\x82\xb3\xe3\x82\x99 ProN W4.otf'
 p649
 sg22
 g23
@@ -3331,7 +3331,7 @@ NtRp650
 g12
 g18
 sg14
-S'Hiragino Maru Gothic ProN'
+S'STIXSizeOneSym'
 p652
 sg16
 I400
@@ -3340,7 +3340,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe4\xb8\xb8\xe3\x82\xb3\xe3\x82\x99 ProN W4.otf'
+S'/Library/Fonts/STIXSizOneSymReg.otf'
 p653
 sg22
 g23
@@ -3352,7 +3352,7 @@ NtRp654
 g12
 g18
 sg14
-S'STIXSizeOneSym'
+S'STIXIntegralsUpSm'
 p656
 sg16
 I400
@@ -3361,7 +3361,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXSizOneSymReg.otf'
+S'/Library/Fonts/STIXIntUpSmReg.otf'
 p657
 sg22
 g23
@@ -3373,7 +3373,7 @@ NtRp658
 g12
 g18
 sg14
-S'STIXIntegralsUpSm'
+S'Andale Mono'
 p660
 sg16
 I400
@@ -3382,7 +3382,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXIntUpSmReg.otf'
+S'/Library/Fonts/Andale Mono.ttf'
 p661
 sg22
 g23
@@ -3394,7 +3394,7 @@ NtRp662
 g12
 g18
 sg14
-S'Andale Mono'
+S'Geeza Pro'
 p664
 sg16
 I400
@@ -3403,7 +3403,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Andale Mono.ttf'
+S'/System/Library/Fonts/Geeza Pro.ttf'
 p665
 sg22
 g23
@@ -3415,7 +3415,7 @@ NtRp666
 g12
 g18
 sg14
-S'Geeza Pro'
+S'Khmer Sangam MN'
 p668
 sg16
 I400
@@ -3424,7 +3424,7 @@ g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/Geeza Pro.ttf'
+S'/Library/Fonts/Khmer Sangam MN.ttf'
 p669
 sg22
 g23
@@ -3436,7 +3436,7 @@ NtRp670
 g12
 g18
 sg14
-S'Khmer Sangam MN'
+S'YuMincho'
 p672
 sg16
 I400
@@ -3445,7 +3445,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Khmer Sangam MN.ttf'
+S'/Library/Fonts/Yu Mincho Medium.otf'
 p673
 sg22
 g23
@@ -3457,7 +3457,7 @@ NtRp674
 g12
 g18
 sg14
-S'YuMincho'
+S'Microsoft Sans Serif'
 p676
 sg16
 I400
@@ -3466,7 +3466,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Yu Mincho Medium.otf'
+S'/Library/Fonts/Microsoft Sans Serif.ttf'
 p677
 sg22
 g23
@@ -3478,16 +3478,16 @@ NtRp678
 g12
 g18
 sg14
-S'Microsoft Sans Serif'
+S'STIXIntegralsUpD'
 p680
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Microsoft Sans Serif.ttf'
+S'/Library/Fonts/STIXIntUpDBol.otf'
 p681
 sg22
 g23
@@ -3499,16 +3499,16 @@ NtRp682
 g12
 g18
 sg14
-S'STIXIntegralsUpD'
+S'Kai'
 p684
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXIntUpDBol.otf'
+S'/Library/Fonts/Kai.ttf'
 p685
 sg22
 g23
@@ -3520,7 +3520,7 @@ NtRp686
 g12
 g18
 sg14
-S'Kai'
+S'STIXGeneral'
 p688
 sg16
 I400
@@ -3529,7 +3529,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Kai.ttf'
+S'/Library/Fonts/STIXGeneral.otf'
 p689
 sg22
 g23
@@ -3539,9 +3539,9 @@ g9
 NtRp690
 (dp691
 g12
-g18
+g13
 sg14
-S'STIXGeneral'
+S'Courier New'
 p692
 sg16
 I400
@@ -3550,7 +3550,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXGeneral.otf'
+S'/Library/Fonts/Courier New Italic.ttf'
 p693
 sg22
 g23
@@ -3560,18 +3560,18 @@ g9
 NtRp694
 (dp695
 g12
-g13
+g18
 sg14
-S'Courier New'
+S'Arial Black'
 p696
 sg16
-I400
+I900
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Courier New Italic.ttf'
+S'/Library/Fonts/Arial Black.ttf'
 p697
 sg22
 g23
@@ -3581,18 +3581,18 @@ g9
 NtRp698
 (dp699
 g12
-g18
+g13
 sg14
-S'Arial Black'
+S'STIXGeneral'
 p700
 sg16
-I900
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Arial Black.ttf'
+S'/Library/Fonts/STIXGeneralItalic.otf'
 p701
 sg22
 g23
@@ -3602,9 +3602,9 @@ g9
 NtRp702
 (dp703
 g12
-g13
+g18
 sg14
-S'STIXGeneral'
+S'Silom'
 p704
 sg16
 I400
@@ -3613,7 +3613,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXGeneralItalic.otf'
+S'/Library/Fonts/Silom.ttf'
 p705
 sg22
 g23
@@ -3623,18 +3623,18 @@ g9
 NtRp706
 (dp707
 g12
-g18
+g58
 sg14
-S'Silom'
+S'Mshtakan'
 p708
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Silom.ttf'
+S'/Library/Fonts/MshtakanBoldOblique.ttf'
 p709
 sg22
 g23
@@ -3644,18 +3644,18 @@ g9
 NtRp710
 (dp711
 g12
-g58
+g18
 sg14
-S'Mshtakan'
+S'Yuppy TC'
 p712
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/MshtakanBoldOblique.ttf'
+S'/Library/Fonts/YuppyTC-Regular.otf'
 p713
 sg22
 g23
@@ -3667,7 +3667,7 @@ NtRp714
 g12
 g18
 sg14
-S'Yuppy TC'
+S'STHeiti'
 p716
 sg16
 I400
@@ -3676,7 +3676,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/YuppyTC-Regular.otf'
+S'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe7\xbb\x86\xe9\xbb\x91.ttf'
 p717
 sg22
 g23
@@ -3688,7 +3688,7 @@ NtRp718
 g12
 g18
 sg14
-S'STHeiti'
+S'STIXSizeFourSym'
 p720
 sg16
 I400
@@ -3697,7 +3697,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe7\xbb\x86\xe9\xbb\x91.ttf'
+S'/Library/Fonts/STIXSizFourSymReg.otf'
 p721
 sg22
 g23
@@ -3709,7 +3709,7 @@ NtRp722
 g12
 g18
 sg14
-S'STIXSizeFourSym'
+S'STHeiti'
 p724
 sg16
 I400
@@ -3718,7 +3718,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXSizFourSymReg.otf'
+S'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe9\xbb\x91\xe4\xbd\x93.ttf'
 p725
 sg22
 g23
@@ -3730,7 +3730,7 @@ NtRp726
 g12
 g18
 sg14
-S'STHeiti'
+S'Apple Chancery'
 p728
 sg16
 I400
@@ -3739,7 +3739,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe9\xbb\x91\xe4\xbd\x93.ttf'
+S'/Library/Fonts/Apple Chancery.ttf'
 p729
 sg22
 g23
@@ -3751,7 +3751,7 @@ NtRp730
 g12
 g18
 sg14
-S'Apple Chancery'
+S'Wingdings 3'
 p732
 sg16
 I400
@@ -3760,7 +3760,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Apple Chancery.ttf'
+S'/Library/Fonts/Wingdings 3.ttf'
 p733
 sg22
 g23
@@ -3770,18 +3770,18 @@ g9
 NtRp734
 (dp735
 g12
-g18
+g13
 sg14
-S'Wingdings 3'
+S'STIXGeneral'
 p736
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Wingdings 3.ttf'
+S'/Library/Fonts/STIXGeneralBolIta.otf'
 p737
 sg22
 g23
@@ -3791,9 +3791,9 @@ g9
 NtRp738
 (dp739
 g12
-g13
+g18
 sg14
-S'STIXGeneral'
+S'STIXIntegralsUpSm'
 p740
 sg16
 I700
@@ -3802,7 +3802,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXGeneralBolIta.otf'
+S'/Library/Fonts/STIXIntUpSmBol.otf'
 p741
 sg22
 g23
@@ -3814,16 +3814,16 @@ NtRp742
 g12
 g18
 sg14
-S'STIXIntegralsUpSm'
+S'Lao Sangam MN'
 p744
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXIntUpSmBol.otf'
+S'/Library/Fonts/Lao Sangam MN.ttf'
 p745
 sg22
 g23
@@ -3835,7 +3835,7 @@ NtRp746
 g12
 g18
 sg14
-S'Lao Sangam MN'
+S'KufiStandardGK'
 p748
 sg16
 I400
@@ -3844,7 +3844,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Lao Sangam MN.ttf'
+S'/Library/Fonts/KufiStandardGK.ttf'
 p749
 sg22
 g23
@@ -3856,16 +3856,16 @@ NtRp750
 g12
 g18
 sg14
-S'KufiStandardGK'
+S'STIXSizeOneSym'
 p752
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/KufiStandardGK.ttf'
+S'/Library/Fonts/STIXSizOneSymBol.otf'
 p753
 sg22
 g23
@@ -3877,16 +3877,16 @@ NtRp754
 g12
 g18
 sg14
-S'STIXSizeOneSym'
+S'Comic Sans MS'
 p756
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXSizOneSymBol.otf'
+S'/Library/Fonts/Comic Sans MS.ttf'
 p757
 sg22
 g23
@@ -3898,7 +3898,7 @@ NtRp758
 g12
 g18
 sg14
-S'Comic Sans MS'
+S'STIXSizeTwoSym'
 p760
 sg16
 I400
@@ -3907,7 +3907,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Comic Sans MS.ttf'
+S'/Library/Fonts/STIXSizTwoSymReg.otf'
 p761
 sg22
 g23
@@ -3919,7 +3919,7 @@ NtRp762
 g12
 g18
 sg14
-S'STIXSizeTwoSym'
+S'Hei'
 p764
 sg16
 I400
@@ -3928,7 +3928,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXSizTwoSymReg.otf'
+S'/Library/Fonts/Hei.ttf'
 p765
 sg22
 g23
@@ -3940,16 +3940,16 @@ NtRp766
 g12
 g18
 sg14
-S'Hei'
+S'Weibei SC'
 p768
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Hei.ttf'
+S'/Library/Fonts/WeibeiSC-Bold.otf'
 p769
 sg22
 g23
@@ -3961,7 +3961,7 @@ NtRp770
 g12
 g18
 sg14
-S'Weibei SC'
+S'STIXSizeFourSym'
 p772
 sg16
 I700
@@ -3970,7 +3970,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/WeibeiSC-Bold.otf'
+S'/Library/Fonts/STIXSizFourSymBol.otf'
 p773
 sg22
 g23
@@ -3982,16 +3982,16 @@ NtRp774
 g12
 g18
 sg14
-S'STIXSizeFourSym'
+S'Apple LiGothic'
 p776
 sg16
-I700
+I500
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXSizFourSymBol.otf'
+S'/Library/Fonts/Apple LiGothic Medium.ttf'
 p777
 sg22
 g23
@@ -4003,16 +4003,16 @@ NtRp778
 g12
 g18
 sg14
-S'Apple LiGothic'
+S'Arial'
 p780
 sg16
-I500
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Apple LiGothic Medium.ttf'
+S'/Library/Fonts/Arial Bold.ttf'
 p781
 sg22
 g23
@@ -4024,7 +4024,7 @@ NtRp782
 g12
 g18
 sg14
-S'Arial'
+S'Georgia'
 p784
 sg16
 I700
@@ -4033,7 +4033,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Arial Bold.ttf'
+S'/Library/Fonts/Georgia Bold.ttf'
 p785
 sg22
 g23
@@ -4045,16 +4045,16 @@ NtRp786
 g12
 g18
 sg14
-S'Georgia'
+S'Hiragino Mincho ProN'
 p788
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Georgia Bold.ttf'
+S'/System/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe6\x98\x8e\xe6\x9c\x9d ProN W3.otf'
 p789
 sg22
 g23
@@ -4066,7 +4066,7 @@ NtRp790
 g12
 g18
 sg14
-S'Hiragino Mincho ProN'
+S'Osaka'
 p792
 sg16
 I400
@@ -4075,7 +4075,7 @@ g18
 sg19
 g18
 sg20
-S'/System/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe6\x98\x8e\xe6\x9c\x9d ProN W3.otf'
+S'/Library/Fonts/OsakaMono.ttf'
 p793
 sg22
 g23
@@ -4087,7 +4087,7 @@ NtRp794
 g12
 g18
 sg14
-S'Osaka'
+S'GungSeo'
 p796
 sg16
 I400
@@ -4096,7 +4096,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/OsakaMono.ttf'
+S'/Library/Fonts/Gungseouche.ttf'
 p797
 sg22
 g23
@@ -4108,16 +4108,16 @@ NtRp798
 g12
 g18
 sg14
-S'GungSeo'
+S'STIXSizeTwoSym'
 p800
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Gungseouche.ttf'
+S'/Library/Fonts/STIXSizTwoSymBol.otf'
 p801
 sg22
 g23
@@ -4129,16 +4129,16 @@ NtRp802
 g12
 g18
 sg14
-S'STIXSizeTwoSym'
+S'Wingdings'
 p804
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXSizTwoSymBol.otf'
+S'/Library/Fonts/Wingdings.ttf'
 p805
 sg22
 g23
@@ -4150,7 +4150,7 @@ NtRp806
 g12
 g18
 sg14
-S'Wingdings'
+S'Impact'
 p808
 sg16
 I400
@@ -4159,7 +4159,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Wingdings.ttf'
+S'/Library/Fonts/Impact.ttf'
 p809
 sg22
 g23
@@ -4171,16 +4171,16 @@ NtRp810
 g12
 g18
 sg14
-S'Impact'
+S'Tahoma'
 p812
 sg16
-I400
+I700
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Impact.ttf'
+S'/Library/Fonts/Tahoma Bold.ttf'
 p813
 sg22
 g23
@@ -4192,7 +4192,7 @@ NtRp814
 g12
 g18
 sg14
-S'Tahoma'
+S'STIXNonUnicode'
 p816
 sg16
 I700
@@ -4201,7 +4201,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Tahoma Bold.ttf'
+S'/Library/Fonts/STIXNonUniBol.otf'
 p817
 sg22
 g23
@@ -4211,9 +4211,9 @@ g9
 NtRp818
 (dp819
 g12
-g18
+g13
 sg14
-S'STIXNonUnicode'
+S'Georgia'
 p820
 sg16
 I700
@@ -4222,7 +4222,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXNonUniBol.otf'
+S'/Library/Fonts/Georgia Bold Italic.ttf'
 p821
 sg22
 g23
@@ -4232,18 +4232,18 @@ g9
 NtRp822
 (dp823
 g12
-g13
+g18
 sg14
-S'Georgia'
+S'STIXIntegralsUpD'
 p824
 sg16
-I700
+I400
 sg17
 g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Georgia Bold Italic.ttf'
+S'/Library/Fonts/STIXIntUpDReg.otf'
 p825
 sg22
 g23
@@ -4255,7 +4255,7 @@ NtRp826
 g12
 g18
 sg14
-S'STIXIntegralsUpD'
+S'Sathu'
 p828
 sg16
 I400
@@ -4264,7 +4264,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/STIXIntUpDReg.otf'
+S'/Library/Fonts/Sathu.ttf'
 p829
 sg22
 g23
@@ -4276,7 +4276,7 @@ NtRp830
 g12
 g18
 sg14
-S'Sathu'
+S'Gujarati MT'
 p832
 sg16
 I400
@@ -4285,7 +4285,7 @@ g18
 sg19
 g18
 sg20
-S'/Library/Fonts/Sathu.ttf'
+S'/Library/Fonts/GujaratiMT.ttf'
 p833
 sg22
 g23
@@ -4297,29 +4297,8 @@ NtRp834
 g12
 g18
 sg14
-S'Gujarati MT'
-p836
-sg16
-I400
-sg17
-g18
-sg19
-g18
-sg20
-S'/Library/Fonts/GujaratiMT.ttf'
-p837
-sg22
-g23
-sbag7
-(g8
-g9
-NtRp838
-(dp839
-g12
-g18
-sg14
 S'Apple SD Gothic Neo'
-p840
+p836
 sg16
 I500
 sg17
@@ -4328,590 +4307,671 @@ sg19
 g18
 sg20
 S'/Library/Fonts/AppleSDGothicNeo-Medium.otf'
-p841
+p837
 sg22
 g23
 sbasS'defaultFamily'
-p842
-(dp843
+p838
+(dp839
 S'afm'
-p844
+p840
 S'Helvetica'
-p845
+p841
 sS'ttf'
-p846
+p842
 S'Bitstream Vera Sans'
-p847
+p843
 ssS'ttffiles'
-p848
-(lp849
+p844
+(lp845
 V/Users/ludo/Development/task-chrono/fonts/ttf/STIXNonUniBolIta.ttf
-p850
+p846
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizTwoSymReg.ttf
-p851
+p847
 aV/Users/ludo/Development/task-chrono/fonts/ttf/cmb10.ttf
-p852
+p848
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizThreeSymBol.ttf
-p853
+p849
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizOneSymBol.ttf
-p854
+p850
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizFourSymBol.ttf
-p855
+p851
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXGeneralItalic.ttf
-p856
+p852
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXGeneralBol.ttf
-p857
+p853
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizFourSymReg.ttf
-p858
+p854
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraMoBI.ttf
-p859
+p855
 aV/Users/ludo/Development/task-chrono/fonts/ttf/cmmi10.ttf
-p860
+p856
 aV/Users/ludo/Development/task-chrono/fonts/ttf/cmss10.ttf
-p861
+p857
 aV/Users/ludo/Development/task-chrono/fonts/ttf/Vera.ttf
-p862
+p858
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizFiveSymReg.ttf
-p863
+p859
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXNonUniIta.ttf
-p864
+p860
 aV/Users/ludo/Development/task-chrono/fonts/ttf/cmtt10.ttf
-p865
+p861
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXNonUni.ttf
-p866
+p862
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXNonUniBol.ttf
-p867
+p863
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXGeneralBolIta.ttf
-p868
+p864
 aV/Users/ludo/Development/task-chrono/fonts/ttf/cmex10.ttf
-p869
+p865
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraBI.ttf
-p870
+p866
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizTwoSymBol.ttf
-p871
+p867
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraMono.ttf
-p872
+p868
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXGeneral.ttf
-p873
+p869
 aV/Users/ludo/Development/task-chrono/fonts/ttf/cmr10.ttf
-p874
+p870
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraMoIt.ttf
-p875
+p871
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraMoBd.ttf
-p876
+p872
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizOneSymReg.ttf
-p877
+p873
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraSeBd.ttf
-p878
+p874
 aV/Users/ludo/Development/task-chrono/fonts/ttf/STIXSizThreeSymReg.ttf
-p879
+p875
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraSe.ttf
-p880
+p876
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraIt.ttf
-p881
+p877
 aV/Users/ludo/Development/task-chrono/fonts/ttf/cmsy10.ttf
-p882
+p878
 aV/Users/ludo/Development/task-chrono/fonts/ttf/VeraBd.ttf
-p883
+p879
 aS'/Library/Fonts/Trebuchet MS Italic.ttf'
-p884
+p880
 aS'/Library/Fonts/Hoefler Text Ornaments.ttf'
-p885
+p881
 aS'/Library/Fonts/MshtakanRegular.ttf'
-p886
+p882
 aS'/System/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe6\x98\x8e\xe6\x9c\x9d ProN W6.otf'
-p887
+p883
 aS'/Library/Fonts/Osaka.ttf'
-p888
+p884
 aS'/Library/Fonts/Verdana Bold.ttf'
-p889
+p885
 aS'/Library/Fonts/AppleSDGothicNeo-UltraLight.otf'
-p890
+p886
 aS'/Library/Fonts/\xe5\x84\xb7\xe9\xbb\x91 Pro.ttf'
-p891
+p887
 aS'/Library/Fonts/Arial Unicode.ttf'
-p892
+p888
 aS'/Library/Fonts/STIXSizThreeSymReg.otf'
-p893
+p889
 aS'/Library/Fonts/DIN Condensed Bold.ttf'
-p894
+p890
 aS'/Library/Fonts/Times New Roman.ttf'
-p895
+p891
 aS'/Library/Fonts/AppleSDGothicNeo-Heavy.otf'
-p896
+p892
 aS'/Library/Fonts/Arial.ttf'
-p897
+p893
 aS'/Library/Fonts/AppleGothic.ttf'
-p898
+p894
 aS'/Library/Fonts/Yu Gothic Medium.otf'
-p899
+p895
 aS'/Library/Fonts/GujaratiMTBold.ttf'
-p900
+p896
 aS'/Library/Fonts/Arial Narrow.ttf'
-p901
+p897
 aS'/System/Library/Fonts/AppleSDGothicNeo-Bold.otf'
-p902
+p898
 aS'/Library/Fonts/NISC18030.ttf'
-p903
+p899
 aS'/Library/Fonts/MshtakanOblique.ttf'
-p904
+p900
 aS'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 Pro W3.otf'
-p905
+p901
 aS'/Library/Fonts/AppleMyungjo.ttf'
-p906
+p902
 aS'/System/Library/Fonts/ZapfDingbats.ttf'
-p907
+p903
 aS'/Library/Fonts/STIXIntDBol.otf'
-p908
+p904
 aS'/Library/Fonts/Apple LiSung Light.ttf'
-p909
+p905
 aS'/Library/Fonts/DIN Alternate Bold.ttf'
-p910
+p906
 aS'/Library/Fonts/Myanmar Sangam MN.ttf'
-p911
+p907
 aS'/Library/Fonts/STIXSizThreeSymBol.otf'
-p912
+p908
 aS'/Library/Fonts/Courier New.ttf'
-p913
+p909
 aS'/Library/Fonts/Arial Narrow Bold Italic.ttf'
-p914
+p910
 aS'/Library/Fonts/Zapfino.ttf'
-p915
+p911
 aS'/Library/Fonts/Arial Narrow Bold.ttf'
-p916
+p912
 aS'/Library/Fonts/Times New Roman Italic.ttf'
-p917
+p913
 aS'/Library/Fonts/Krungthep.ttf'
-p918
+p914
 aS'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe6\x98\x8e\xe6\x9c\x9d Pro W3.otf'
-p919
+p915
 aS'/Library/Fonts/AppleSDGothicNeo-ExtraBold.otf'
-p920
+p916
 aS'/Library/Fonts/Georgia.ttf'
-p921
+p917
 aS'/Library/Fonts/STIXIntSmBol.otf'
-p922
+p918
 aS'/Library/Fonts/Trebuchet MS Bold.ttf'
-p923
+p919
 aS'/System/Library/Fonts/Apple Symbols.ttf'
-p924
+p920
 aS'/Library/Fonts/Times New Roman Bold Italic.ttf'
-p925
+p921
 aS'/Library/Fonts/Webdings.ttf'
-p926
+p922
 aS'/Library/Fonts/Arial Narrow Italic.ttf'
-p927
+p923
 aS'/System/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 ProN W3.otf'
-p928
+p924
 aS'/Library/Fonts/Pilgiche.ttf'
-p929
+p925
 aS'/System/Library/Fonts/Apple Braille Outline 8 Dot.ttf'
-p930
+p926
 aS'/Library/Fonts/Nadeem.ttf'
-p931
+p927
 aS'/Library/Fonts/PlantagenetCherokee.ttf'
-p932
+p928
 aS'/Library/Fonts/Times New Roman Bold.ttf'
-p933
+p929
 aS'/Library/Fonts/BiauKai.ttf'
-p934
+p930
 aS'/Library/Fonts/Arial Bold Italic.ttf'
-p935
+p931
 aS'/Library/Fonts/STIXVar.otf'
-p936
+p932
 aS'/Library/Fonts/STIXVarBol.otf'
-p937
+p933
 aS'/Library/Fonts/Hiragino Sans GB W3.otf'
-p938
+p934
 aS'/System/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 ProN W6.otf'
-p939
+p935
 aS'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 StdN W8.otf'
-p940
+p936
 aS'/Library/Fonts/MshtakanBold.ttf'
-p941
+p937
 aS'/Library/Fonts/STIXIntUpBol.otf'
-p942
+p938
 aS'/Library/Fonts/WawaTC-Regular.otf'
-p943
+p939
 aS'/Library/Fonts/Skia.ttf'
-p944
+p940
 aS'/Library/Fonts/STIXSizFiveSymReg.otf'
-p945
+p941
 aS'/Library/Fonts/Verdana.ttf'
-p946
+p942
 aS'/Library/Fonts/Gurmukhi.ttf'
-p947
+p943
 aS'/Library/Fonts/Yu Gothic Bold.otf'
-p948
+p944
 aS'/System/Library/Fonts/Apple Color Emoji.ttf'
-p949
+p945
 aS'/Library/Fonts/Yu Mincho Demibold.otf'
-p950
+p946
 aS'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe4\xbb\xbf\xe5\xae\x8b.ttf'
-p951
+p947
 aS'/Library/Fonts/Arial Italic.ttf'
-p952
+p948
 aS'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 Std W8.otf'
-p953
+p949
 aS'/Library/Fonts/\xe5\x84\xb7\xe5\xae\x8b Pro.ttf'
-p954
+p950
 aS'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe4\xb8\xb8\xe3\x82\xb3\xe3\x82\x99 Pro W4.otf'
-p955
+p951
 aS'/Library/Fonts/STIXNonUniBolIta.otf'
-p956
+p952
 aS'/System/Library/Fonts/Apple Braille Pinpoint 8 Dot.ttf'
-p957
+p953
 aS'/Library/Fonts/Georgia Italic.ttf'
-p958
+p954
 aS'/System/Library/Fonts/Apple Braille Outline 6 Dot.ttf'
-p959
+p955
 aS'/Library/Fonts/Chalkduster.ttf'
-p960
+p956
 aS'/Library/Fonts/Courier New Bold Italic.ttf'
-p961
+p957
 aS'/Library/Fonts/WawaSC-Regular.otf'
-p962
+p958
 aS'/Library/Fonts/Arial Rounded Bold.ttf'
-p963
+p959
 aS'/Library/Fonts/DevanagariMTBold.ttf'
-p964
+p960
 aS'/Library/Fonts/DevanagariMT.ttf'
-p965
+p961
 aS'/Library/Fonts/PCmyoungjo.ttf'
-p966
+p962
 aS'/System/Library/Fonts/LastResort.ttf'
-p967
+p963
 aS'/Library/Fonts/AppleSDGothicNeo-Light.otf'
-p968
+p964
 aS'/Library/Fonts/AlBayan.ttf'
-p969
+p965
 aS'/Library/Fonts/Verdana Bold Italic.ttf'
-p970
+p966
 aS'/Library/Fonts/Hiragino Sans GB W6.otf'
-p971
+p967
 aS'/Library/Fonts/Kailasa.ttf'
-p972
+p968
 aS'/Library/Fonts/STIXIntSmReg.otf'
-p973
+p969
 aS'/Library/Fonts/AppleSDGothicNeo-Thin.otf'
-p974
+p970
 aS'/Library/Fonts/Kokonor.ttf'
-p975
+p971
 aS'/System/Library/Fonts/Geeza Pro Bold.ttf'
-p976
+p972
 aS'/Library/Fonts/Verdana Italic.ttf'
-p977
+p973
 aS'/Library/Fonts/STIXGeneralBol.otf'
-p978
+p974
 aS'/System/Library/Fonts/Apple Braille.ttf'
-p979
+p975
 aS'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe6\x98\x8e\xe6\x9c\x9d Pro W6.otf'
-p980
+p976
 aS'/Library/Fonts/InaiMathi.ttf'
-p981
+p977
 aS'/Library/Fonts/WeibeiTC-Bold.otf'
-p982
+p978
 aS'/Library/Fonts/STIXNonUni.otf'
-p983
+p979
 aS'/Library/Fonts/STIXIntDReg.otf'
-p984
+p980
 aS'/Library/Fonts/STIXNonUniIta.otf'
-p985
+p981
 aS'/Library/Fonts/Baghdad.ttf'
-p986
+p982
 aS'/Library/Fonts/STIXIntUpReg.otf'
-p987
+p983
 aS'/Library/Fonts/YuppySC-Regular.otf'
-p988
+p984
 aS'/Library/Fonts/Comic Sans MS Bold.ttf'
-p989
+p985
 aS'/Library/Fonts/Trebuchet MS.ttf'
-p990
+p986
 aS'/Library/Fonts/Courier New Bold.ttf'
-p991
+p987
 aS'/Library/Fonts/BigCaslon.ttf'
-p992
+p988
 aS'/Library/Fonts/Ayuthaya.ttf'
-p993
+p989
 aS'/Library/Fonts/AppleSDGothicNeo-SemiBold.otf'
-p994
+p990
 aS'/Library/Fonts/Herculanum.ttf'
-p995
+p991
 aS'/Library/Fonts/DecoTypeNaskh.ttf'
-p996
+p992
 aS'/System/Library/Fonts/Apple Braille Pinpoint 6 Dot.ttf'
-p997
+p993
 aS'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe8\xa7\x92\xe3\x82\xb3\xe3\x82\x99 Pro W6.otf'
-p998
+p994
 aS'/System/Library/Fonts/Symbol.ttf'
-p999
+p995
 aS'/Library/Fonts/Trebuchet MS Bold Italic.ttf'
-p1000
+p996
 aS'/System/Library/Fonts/AppleSDGothicNeo-Regular.otf'
-p1001
+p997
 aS'/Library/Fonts/AlBayanBold.ttf'
-p1002
+p998
 aS'/Library/Fonts/Wingdings 2.ttf'
-p1003
+p999
 aS'/Library/Fonts/HeadlineA.ttf'
-p1004
+p1000
 aS'/Library/Fonts/Tahoma.ttf'
-p1005
+p1001
 aS'/Library/Fonts/Brush Script.ttf'
-p1006
+p1002
 aS'/System/Library/Fonts/Keyboard.ttf'
-p1007
+p1003
 aS'/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe4\xb8\xb8\xe3\x82\xb3\xe3\x82\x99 ProN W4.otf'
-p1008
+p1004
 aS'/Library/Fonts/STIXSizOneSymReg.otf'
-p1009
+p1005
 aS'/Library/Fonts/STIXIntUpSmReg.otf'
-p1010
+p1006
 aS'/Library/Fonts/Andale Mono.ttf'
-p1011
+p1007
 aS'/System/Library/Fonts/Geeza Pro.ttf'
-p1012
+p1008
 aS'/Library/Fonts/Khmer Sangam MN.ttf'
-p1013
+p1009
 aS'/Library/Fonts/Yu Mincho Medium.otf'
-p1014
+p1010
 aS'/Library/Fonts/Microsoft Sans Serif.ttf'
-p1015
+p1011
 aS'/Library/Fonts/STIXIntUpDBol.otf'
-p1016
+p1012
 aS'/Library/Fonts/Kai.ttf'
-p1017
+p1013
 aS'/Library/Fonts/STIXGeneral.otf'
-p1018
+p1014
 aS'/Library/Fonts/Courier New Italic.ttf'
-p1019
+p1015
 aS'/Library/Fonts/Arial Black.ttf'
-p1020
+p1016
 aS'/Library/Fonts/STIXGeneralItalic.otf'
-p1021
+p1017
 aS'/Library/Fonts/Silom.ttf'
-p1022
+p1018
 aS'/Library/Fonts/MshtakanBoldOblique.ttf'
-p1023
+p1019
 aS'/Library/Fonts/YuppyTC-Regular.otf'
-p1024
+p1020
 aS'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe7\xbb\x86\xe9\xbb\x91.ttf'
-p1025
+p1021
 aS'/Library/Fonts/STIXSizFourSymReg.otf'
-p1026
+p1022
 aS'/Library/Fonts/\xe5\x8d\x8e\xe6\x96\x87\xe9\xbb\x91\xe4\xbd\x93.ttf'
-p1027
+p1023
 aS'/Library/Fonts/Apple Chancery.ttf'
-p1028
+p1024
 aS'/Library/Fonts/Wingdings 3.ttf'
-p1029
+p1025
 aS'/Library/Fonts/STIXGeneralBolIta.otf'
-p1030
+p1026
 aS'/Library/Fonts/STIXIntUpSmBol.otf'
-p1031
+p1027
 aS'/Library/Fonts/Lao Sangam MN.ttf'
-p1032
+p1028
 aS'/Library/Fonts/KufiStandardGK.ttf'
-p1033
+p1029
 aS'/Library/Fonts/STIXSizOneSymBol.otf'
-p1034
+p1030
 aS'/Library/Fonts/Comic Sans MS.ttf'
-p1035
+p1031
 aS'/Library/Fonts/STIXSizTwoSymReg.otf'
-p1036
+p1032
 aS'/Library/Fonts/Hei.ttf'
-p1037
+p1033
 aS'/Library/Fonts/WeibeiSC-Bold.otf'
-p1038
+p1034
 aS'/Library/Fonts/STIXSizFourSymBol.otf'
-p1039
+p1035
 aS'/Library/Fonts/Apple LiGothic Medium.ttf'
-p1040
+p1036
 aS'/Library/Fonts/Arial Bold.ttf'
-p1041
+p1037
 aS'/Library/Fonts/Georgia Bold.ttf'
-p1042
+p1038
 aS'/System/Library/Fonts/\xe3\x83\x92\xe3\x83\xa9\xe3\x82\xad\xe3\x82\x99\xe3\x83\x8e\xe6\x98\x8e\xe6\x9c\x9d ProN W3.otf'
-p1043
+p1039
 aS'/Library/Fonts/OsakaMono.ttf'
-p1044
+p1040
 aS'/Library/Fonts/Gungseouche.ttf'
-p1045
+p1041
 aS'/Library/Fonts/STIXSizTwoSymBol.otf'
-p1046
+p1042
 aS'/Library/Fonts/Wingdings.ttf'
-p1047
+p1043
 aS'/Library/Fonts/Impact.ttf'
-p1048
+p1044
 aS'/Library/Fonts/Tahoma Bold.ttf'
-p1049
+p1045
 aS'/Library/Fonts/STIXNonUniBol.otf'
-p1050
+p1046
 aS'/Library/Fonts/Georgia Bold Italic.ttf'
-p1051
+p1047
 aS'/Library/Fonts/STIXIntUpDReg.otf'
-p1052
+p1048
 aS'/Library/Fonts/Sathu.ttf'
-p1053
+p1049
 aS'/Library/Fonts/GujaratiMT.ttf'
-p1054
+p1050
 aS'/Library/Fonts/AppleSDGothicNeo-Medium.otf'
-p1055
+p1051
 asS'_FontManager__default_weight'
-p1056
+p1052
 g18
 sS'_version'
-p1057
-I7
+p1053
+I101
 sS'ttf_lookup_cache'
-p1058
-(dp1059
+p1054
+(dp1055
 sS'default_size'
-p1060
+p1056
 NsS'defaultFont'
-p1061
-(dp1062
-g844
-Nsg846
-g862
-ssS'afmfiles'
-p1063
-(lp1064
+p1057
+(dp1058
+g840
 V/Users/ludo/Development/task-chrono/fonts/afm/pcrbo8a.afm
-p1065
+p1059
+sg842
+g858
+ssS'afmfiles'
+p1060
+(lp1061
+g1059
 aV/Users/ludo/Development/task-chrono/fonts/afm/pplr8a.afm
-p1066
+p1062
 aV/Users/ludo/Development/task-chrono/fonts/afm/pbkd8a.afm
-p1067
+p1063
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Helvetica-BoldOblique.afm
-p1068
+p1064
 aV/Users/ludo/Development/task-chrono/fonts/afm/pagdo8a.afm
-p1069
+p1065
 aV/Users/ludo/Development/task-chrono/fonts/afm/pcrr8a.afm
-p1070
+p1066
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Times-Roman.afm
-p1071
+p1067
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Courier-Oblique.afm
-p1072
+p1068
 aV/Users/ludo/Development/task-chrono/fonts/afm/pncbi8a.afm
-p1073
+p1069
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Times-BoldItalic.afm
-p1074
+p1070
 aV/Users/ludo/Development/task-chrono/fonts/afm/pbkdi8a.afm
-p1075
+p1071
 aV/Users/ludo/Development/task-chrono/fonts/afm/pplri8a.afm
-p1076
+p1072
 aV/Users/ludo/Development/task-chrono/fonts/afm/pncb8a.afm
-p1077
+p1073
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Times-Bold.afm
-p1078
+p1074
 aV/Users/ludo/Development/task-chrono/fonts/afm/pagk8a.afm
-p1079
+p1075
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvro8a.afm
-p1080
+p1076
 aV/Users/ludo/Development/task-chrono/fonts/afm/pcrb8a.afm
-p1081
+p1077
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvr8a.afm
-p1082
+p1078
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvbo8an.afm
-p1083
+p1079
 aV/Users/ludo/Development/task-chrono/fonts/afm/pzdr.afm
-p1084
+p1080
 aV/Users/ludo/Development/task-chrono/fonts/afm/cmmi10.afm
-p1085
+p1081
 aV/Users/ludo/Development/task-chrono/fonts/afm/pncri8a.afm
-p1086
+p1082
 aV/Users/ludo/Development/task-chrono/fonts/afm/pplbi8a.afm
-p1087
+p1083
 aV/Users/ludo/Development/task-chrono/fonts/afm/cmex10.afm
-p1088
+p1084
 aV/Users/ludo/Development/task-chrono/fonts/afm/putri8a.afm
-p1089
+p1085
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Courier-Bold.afm
-p1090
+p1086
 aV/Users/ludo/Development/task-chrono/fonts/afm/cmsy10.afm
-p1091
+p1087
 aV/Users/ludo/Development/task-chrono/fonts/afm/pbkli8a.afm
-p1092
+p1088
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvb8a.afm
-p1093
+p1089
 aV/Users/ludo/Development/task-chrono/fonts/afm/pbkl8a.afm
-p1094
+p1090
 aV/Users/ludo/Development/task-chrono/fonts/afm/putb8a.afm
-p1095
+p1091
 aV/Users/ludo/Development/task-chrono/fonts/afm/pplb8a.afm
-p1096
+p1092
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvro8an.afm
-p1097
+p1093
 aV/Users/ludo/Development/task-chrono/fonts/afm/psyr.afm
-p1098
+p1094
 aV/Users/ludo/Development/task-chrono/fonts/afm/pzcmi8a.afm
-p1099
+p1095
 aV/Users/ludo/Development/task-chrono/fonts/afm/pagko8a.afm
-p1100
+p1096
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Helvetica-Oblique.afm
-p1101
+p1097
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvb8an.afm
-p1102
+p1098
 aV/Users/ludo/Development/task-chrono/fonts/afm/pncr8a.afm
-p1103
+p1099
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvl8a.afm
-p1104
+p1100
 aV/Users/ludo/Development/task-chrono/fonts/afm/putbi8a.afm
-p1105
+p1101
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvbo8a.afm
-p1106
+p1102
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Times-Italic.afm
-p1107
+p1103
 aV/Users/ludo/Development/task-chrono/fonts/afm/ptmri8a.afm
-p1108
+p1104
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvr8an.afm
-p1109
+p1105
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Helvetica-Bold.afm
-p1110
+p1106
 aV/Users/ludo/Development/task-chrono/fonts/afm/ptmbi8a.afm
-p1111
+p1107
 aV/Users/ludo/Development/task-chrono/fonts/afm/phvlo8a.afm
-p1112
+p1108
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/ZapfDingbats.afm
-p1113
+p1109
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Courier.afm
-p1114
+p1110
 aV/Users/ludo/Development/task-chrono/fonts/afm/cmtt10.afm
-p1115
+p1111
 aV/Users/ludo/Development/task-chrono/fonts/afm/putr8a.afm
-p1116
+p1112
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Symbol.afm
-p1117
+p1113
 aV/Users/ludo/Development/task-chrono/fonts/afm/ptmb8a.afm
-p1118
+p1114
 aV/Users/ludo/Development/task-chrono/fonts/afm/pagd8a.afm
-p1119
+p1115
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Helvetica.afm
-p1120
+p1116
 aV/Users/ludo/Development/task-chrono/fonts/afm/pcrro8a.afm
-p1121
+p1117
 aV/Users/ludo/Development/task-chrono/fonts/afm/cmr10.afm
-p1122
+p1118
 aV/Users/ludo/Development/task-chrono/fonts/pdfcorefonts/Courier-BoldOblique.afm
-p1123
+p1119
 aV/Users/ludo/Development/task-chrono/fonts/afm/ptmr8a.afm
-p1124
+p1120
 asS'afmlist'
-p1125
-(lp1126
+p1121
+(lp1122
 g7
 (g8
 g9
-NtRp1127
-(dp1128
+NtRp1123
+(dp1124
 g12
 g13
 sg14
 S'Courier'
-p1129
+p1125
 sg16
 I700
+sg17
+g18
+sg19
+g18
+sg20
+g1059
+sg22
+g23
+sbag7
+(g8
+g9
+NtRp1126
+(dp1127
+g12
+g18
+sg14
+S'Palatino'
+p1128
+sg16
+I500
+sg17
+g18
+sg19
+g18
+sg20
+g1062
+sg22
+g23
+sbag7
+(g8
+g9
+NtRp1129
+(dp1130
+g12
+g18
+sg14
+S'ITC Bookman'
+p1131
+sg16
+I600
+sg17
+g18
+sg19
+g18
+sg20
+g1063
+sg22
+g23
+sbag7
+(g8
+g9
+NtRp1132
+(dp1133
+g12
+g13
+sg14
+S'Helvetica'
+p1134
+sg16
+I700
+sg17
+g18
+sg19
+g18
+sg20
+g1064
+sg22
+g23
+sbag7
+(g8
+g9
+NtRp1135
+(dp1136
+g12
+g13
+sg14
+S'ITC Avant Garde Gothic'
+p1137
+sg16
+I600
 sg17
 g18
 sg19
@@ -4923,13 +4983,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1130
-(dp1131
+NtRp1138
+(dp1139
 g12
 g18
 sg14
-S'Palatino'
-p1132
+S'Courier'
+p1140
 sg16
 I500
 sg17
@@ -4943,15 +5003,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1133
-(dp1134
+NtRp1141
+(dp1142
 g12
 g18
 sg14
-S'ITC Bookman'
-p1135
+S'Times'
+p1143
 sg16
-I600
+I500
 sg17
 g18
 sg19
@@ -4963,15 +5023,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1136
-(dp1137
+NtRp1144
+(dp1145
 g12
 g13
 sg14
-S'Helvetica'
-p1138
+S'Courier'
+p1146
 sg16
-I700
+I500
 sg17
 g18
 sg19
@@ -4983,15 +5043,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1139
-(dp1140
+NtRp1147
+(dp1148
 g12
 g13
 sg14
-S'ITC Avant Garde Gothic'
-p1141
+S'New Century Schoolbook'
+p1149
 sg16
-I600
+I700
 sg17
 g18
 sg19
@@ -5003,15 +5063,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1142
-(dp1143
+NtRp1150
+(dp1151
 g12
-g18
+g13
 sg14
-S'Courier'
-p1144
+S'Times'
+p1152
 sg16
-I500
+I700
 sg17
 g18
 sg19
@@ -5023,15 +5083,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1145
-(dp1146
+NtRp1153
+(dp1154
 g12
-g18
+g13
 sg14
-S'Times'
-p1147
+S'ITC Bookman'
+p1155
 sg16
-I500
+I600
 sg17
 g18
 sg19
@@ -5043,13 +5103,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1148
-(dp1149
+NtRp1156
+(dp1157
 g12
 g13
 sg14
-S'Courier'
-p1150
+S'Palatino'
+p1158
 sg16
 I500
 sg17
@@ -5063,13 +5123,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1151
-(dp1152
+NtRp1159
+(dp1160
 g12
-g13
+g18
 sg14
 S'New Century Schoolbook'
-p1153
+p1161
 sg16
 I700
 sg17
@@ -5083,13 +5143,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1154
-(dp1155
+NtRp1162
+(dp1163
 g12
-g13
+g18
 sg14
 S'Times'
-p1156
+p1164
 sg16
 I700
 sg17
@@ -5103,15 +5163,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1157
-(dp1158
+NtRp1165
+(dp1166
 g12
-g13
+g18
 sg14
-S'ITC Bookman'
-p1159
+S'ITC Avant Garde Gothic'
+p1167
 sg16
-I600
+I400
 sg17
 g18
 sg19
@@ -5123,13 +5183,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1160
-(dp1161
+NtRp1168
+(dp1169
 g12
 g13
 sg14
-S'Palatino'
-p1162
+S'Helvetica'
+p1170
 sg16
 I500
 sg17
@@ -5143,13 +5203,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1163
-(dp1164
+NtRp1171
+(dp1172
 g12
 g18
 sg14
-S'New Century Schoolbook'
-p1165
+S'Courier'
+p1173
 sg16
 I700
 sg17
@@ -5163,15 +5223,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1166
-(dp1167
+NtRp1174
+(dp1175
 g12
 g18
 sg14
-S'Times'
-p1168
+S'Helvetica'
+p1176
 sg16
-I700
+I500
 sg17
 g18
 sg19
@@ -5183,17 +5243,17 @@ g23
 sbag7
 (g8
 g9
-NtRp1169
-(dp1170
+NtRp1177
+(dp1178
 g12
-g18
+g13
 sg14
-S'ITC Avant Garde Gothic'
-p1171
+S'Helvetica'
+p1179
 sg16
-I400
+I700
 sg17
-g18
+g200
 sg19
 g18
 sg20
@@ -5203,13 +5263,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1172
-(dp1173
+NtRp1180
+(dp1181
 g12
-g13
+g18
 sg14
-S'Helvetica'
-p1174
+S'ITC Zapf Dingbats'
+p1182
 sg16
 I500
 sg17
@@ -5223,15 +5283,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1175
-(dp1176
+NtRp1183
+(dp1184
 g12
-g18
+g13
 sg14
-S'Courier'
-p1177
+S'Computer Modern'
+p1185
 sg16
-I700
+I500
 sg17
 g18
 sg19
@@ -5243,13 +5303,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1178
-(dp1179
+NtRp1186
+(dp1187
 g12
-g18
+g13
 sg14
-S'Helvetica'
-p1180
+S'New Century Schoolbook'
+p1188
 sg16
 I500
 sg17
@@ -5263,17 +5323,17 @@ g23
 sbag7
 (g8
 g9
-NtRp1181
-(dp1182
+NtRp1189
+(dp1190
 g12
 g13
 sg14
-S'Helvetica'
-p1183
+S'Palatino'
+p1191
 sg16
 I700
 sg17
-g200
+g18
 sg19
 g18
 sg20
@@ -5283,13 +5343,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1184
-(dp1185
+NtRp1192
+(dp1193
 g12
 g18
 sg14
-S'ITC Zapf Dingbats'
-p1186
+S'Computer Modern'
+p1194
 sg16
 I500
 sg17
@@ -5303,15 +5363,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1187
-(dp1188
+NtRp1195
+(dp1196
 g12
 g13
 sg14
-S'Computer Modern'
-p1189
+S'Utopia'
+p1197
 sg16
-I500
+I400
 sg17
 g18
 sg19
@@ -5323,15 +5383,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1190
-(dp1191
+NtRp1198
+(dp1199
 g12
-g13
+g18
 sg14
-S'New Century Schoolbook'
-p1192
+S'Courier'
+p1200
 sg16
-I500
+I700
 sg17
 g18
 sg19
@@ -5343,15 +5403,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1193
-(dp1194
+NtRp1201
+(dp1202
 g12
 g13
 sg14
-S'Palatino'
-p1195
+S'Computer Modern'
+p1203
 sg16
-I700
+I500
 sg17
 g18
 sg19
@@ -5363,15 +5423,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1196
-(dp1197
+NtRp1204
+(dp1205
 g12
-g18
+g13
 sg14
-S'Computer Modern'
-p1198
+S'ITC Bookman'
+p1206
 sg16
-I500
+I200
 sg17
 g18
 sg19
@@ -5383,15 +5443,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1199
-(dp1200
+NtRp1207
+(dp1208
 g12
-g13
+g18
 sg14
-S'Utopia'
-p1201
+S'Helvetica'
+p1209
 sg16
-I400
+I700
 sg17
 g18
 sg19
@@ -5403,15 +5463,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1202
-(dp1203
+NtRp1210
+(dp1211
 g12
 g18
 sg14
-S'Courier'
-p1204
+S'ITC Bookman'
+p1212
 sg16
-I700
+I200
 sg17
 g18
 sg19
@@ -5423,15 +5483,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1205
-(dp1206
+NtRp1213
+(dp1214
 g12
-g13
+g18
 sg14
-S'Computer Modern'
-p1207
+S'Utopia'
+p1215
 sg16
-I500
+I700
 sg17
 g18
 sg19
@@ -5443,15 +5503,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1208
-(dp1209
+NtRp1216
+(dp1217
 g12
-g13
+g18
 sg14
-S'ITC Bookman'
-p1210
+S'Palatino'
+p1218
 sg16
-I200
+I700
 sg17
 g18
 sg19
@@ -5463,17 +5523,17 @@ g23
 sbag7
 (g8
 g9
-NtRp1211
-(dp1212
+NtRp1219
+(dp1220
 g12
-g18
+g13
 sg14
 S'Helvetica'
-p1213
+p1221
 sg16
-I700
+I500
 sg17
-g18
+g200
 sg19
 g18
 sg20
@@ -5483,15 +5543,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1214
-(dp1215
+NtRp1222
+(dp1223
 g12
 g18
 sg14
-S'ITC Bookman'
-p1216
+S'Symbol'
+p1224
 sg16
-I200
+I500
 sg17
 g18
 sg19
@@ -5503,15 +5563,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1217
-(dp1218
+NtRp1225
+(dp1226
 g12
-g18
+g13
 sg14
-S'Utopia'
-p1219
+S'ITC Zapf Chancery'
+p1227
 sg16
-I700
+I500
 sg17
 g18
 sg19
@@ -5523,15 +5583,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1220
-(dp1221
+NtRp1228
+(dp1229
 g12
-g18
+g13
 sg14
-S'Palatino'
-p1222
+S'ITC Avant Garde Gothic'
+p1230
 sg16
-I700
+I400
 sg17
 g18
 sg19
@@ -5543,17 +5603,17 @@ g23
 sbag7
 (g8
 g9
-NtRp1223
-(dp1224
+NtRp1231
+(dp1232
 g12
 g13
 sg14
 S'Helvetica'
-p1225
+p1233
 sg16
 I500
 sg17
-g200
+g18
 sg19
 g18
 sg20
@@ -5563,17 +5623,17 @@ g23
 sbag7
 (g8
 g9
-NtRp1226
-(dp1227
+NtRp1234
+(dp1235
 g12
 g18
 sg14
-S'Symbol'
-p1228
+S'Helvetica'
+p1236
 sg16
-I500
+I700
 sg17
-g18
+g200
 sg19
 g18
 sg20
@@ -5583,13 +5643,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1229
-(dp1230
+NtRp1237
+(dp1238
 g12
-g13
+g18
 sg14
-S'ITC Zapf Chancery'
-p1231
+S'New Century Schoolbook'
+p1239
 sg16
 I500
 sg17
@@ -5603,15 +5663,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1232
-(dp1233
+NtRp1240
+(dp1241
 g12
-g13
+g18
 sg14
-S'ITC Avant Garde Gothic'
-p1234
+S'Helvetica'
+p1242
 sg16
-I400
+I200
 sg17
 g18
 sg19
@@ -5623,15 +5683,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1235
-(dp1236
+NtRp1243
+(dp1244
 g12
 g13
 sg14
-S'Helvetica'
-p1237
+S'Utopia'
+p1245
 sg16
-I500
+I700
 sg17
 g18
 sg19
@@ -5643,17 +5703,17 @@ g23
 sbag7
 (g8
 g9
-NtRp1238
-(dp1239
+NtRp1246
+(dp1247
 g12
-g18
+g13
 sg14
 S'Helvetica'
-p1240
+p1248
 sg16
 I700
 sg17
-g200
+g18
 sg19
 g18
 sg20
@@ -5663,13 +5723,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1241
-(dp1242
+NtRp1249
+(dp1250
 g12
-g18
+g13
 sg14
-S'New Century Schoolbook'
-p1243
+S'Times'
+p1251
 sg16
 I500
 sg17
@@ -5683,15 +5743,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1244
-(dp1245
+NtRp1252
+(dp1253
 g12
-g18
+g13
 sg14
-S'Helvetica'
-p1246
+S'Times'
+p1254
 sg16
-I200
+I500
 sg17
 g18
 sg19
@@ -5703,17 +5763,17 @@ g23
 sbag7
 (g8
 g9
-NtRp1247
-(dp1248
+NtRp1255
+(dp1256
 g12
-g13
-sg14
-S'Utopia'
-p1249
-sg16
-I700
-sg17
 g18
+sg14
+S'Helvetica'
+p1257
+sg16
+I500
+sg17
+g200
 sg19
 g18
 sg20
@@ -5723,13 +5783,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1250
-(dp1251
+NtRp1258
+(dp1259
 g12
-g13
+g18
 sg14
 S'Helvetica'
-p1252
+p1260
 sg16
 I700
 sg17
@@ -5743,15 +5803,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1253
-(dp1254
+NtRp1261
+(dp1262
 g12
 g13
 sg14
 S'Times'
-p1255
+p1263
 sg16
-I500
+I700
 sg17
 g18
 sg19
@@ -5763,15 +5823,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1256
-(dp1257
+NtRp1264
+(dp1265
 g12
 g13
 sg14
-S'Times'
-p1258
+S'Helvetica'
+p1266
 sg16
-I500
+I200
 sg17
 g18
 sg19
@@ -5783,17 +5843,17 @@ g23
 sbag7
 (g8
 g9
-NtRp1259
-(dp1260
+NtRp1267
+(dp1268
 g12
 g18
 sg14
-S'Helvetica'
-p1261
+S'ZapfDingbats'
+p1269
 sg16
 I500
 sg17
-g200
+g18
 sg19
 g18
 sg20
@@ -5803,15 +5863,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1262
-(dp1263
+NtRp1270
+(dp1271
 g12
 g18
 sg14
-S'Helvetica'
-p1264
+S'Courier'
+p1272
 sg16
-I700
+I500
 sg17
 g18
 sg19
@@ -5823,15 +5883,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1265
-(dp1266
+NtRp1273
+(dp1274
 g12
-g13
+g18
 sg14
-S'Times'
-p1267
+S'Computer Modern'
+p1275
 sg16
-I700
+I500
 sg17
 g18
 sg19
@@ -5843,15 +5903,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1268
-(dp1269
+NtRp1276
+(dp1277
 g12
-g13
+g18
 sg14
-S'Helvetica'
-p1270
+S'Utopia'
+p1278
 sg16
-I200
+I400
 sg17
 g18
 sg19
@@ -5863,13 +5923,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1271
-(dp1272
+NtRp1279
+(dp1280
 g12
 g18
 sg14
-S'ZapfDingbats'
-p1273
+S'Symbol'
+p1281
 sg16
 I500
 sg17
@@ -5883,15 +5943,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1274
-(dp1275
+NtRp1282
+(dp1283
 g12
 g18
 sg14
-S'Courier'
-p1276
+S'Times'
+p1284
 sg16
-I500
+I700
 sg17
 g18
 sg19
@@ -5903,15 +5963,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1277
-(dp1278
+NtRp1285
+(dp1286
 g12
 g18
 sg14
-S'Computer Modern'
-p1279
+S'ITC Avant Garde Gothic'
+p1287
 sg16
-I500
+I600
 sg17
 g18
 sg19
@@ -5923,15 +5983,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1280
-(dp1281
+NtRp1288
+(dp1289
 g12
 g18
 sg14
-S'Utopia'
-p1282
+S'Helvetica'
+p1290
 sg16
-I400
+I500
 sg17
 g18
 sg19
@@ -5943,13 +6003,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1283
-(dp1284
+NtRp1291
+(dp1292
 g12
-g18
+g13
 sg14
-S'Symbol'
-p1285
+S'Courier'
+p1293
 sg16
 I500
 sg17
@@ -5963,15 +6023,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1286
-(dp1287
+NtRp1294
+(dp1295
 g12
 g18
 sg14
-S'Times'
-p1288
+S'Computer Modern'
+p1296
 sg16
-I700
+I500
 sg17
 g18
 sg19
@@ -5983,15 +6043,15 @@ g23
 sbag7
 (g8
 g9
-NtRp1289
-(dp1290
+NtRp1297
+(dp1298
 g12
-g18
+g13
 sg14
-S'ITC Avant Garde Gothic'
-p1291
+S'Courier'
+p1299
 sg16
-I600
+I700
 sg17
 g18
 sg19
@@ -6003,13 +6063,13 @@ g23
 sbag7
 (g8
 g9
-NtRp1292
-(dp1293
+NtRp1300
+(dp1301
 g12
 g18
 sg14
-S'Helvetica'
-p1294
+S'Times'
+p1302
 sg16
 I500
 sg17
@@ -6018,86 +6078,6 @@ sg19
 g18
 sg20
 g1120
-sg22
-g23
-sbag7
-(g8
-g9
-NtRp1295
-(dp1296
-g12
-g13
-sg14
-S'Courier'
-p1297
-sg16
-I500
-sg17
-g18
-sg19
-g18
-sg20
-g1121
-sg22
-g23
-sbag7
-(g8
-g9
-NtRp1298
-(dp1299
-g12
-g18
-sg14
-S'Computer Modern'
-p1300
-sg16
-I500
-sg17
-g18
-sg19
-g18
-sg20
-g1122
-sg22
-g23
-sbag7
-(g8
-g9
-NtRp1301
-(dp1302
-g12
-g13
-sg14
-S'Courier'
-p1303
-sg16
-I700
-sg17
-g18
-sg19
-g18
-sg20
-g1123
-sg22
-g23
-sbag7
-(g8
-g9
-NtRp1304
-(dp1305
-g12
-g18
-sg14
-S'Times'
-p1306
-sg16
-I500
-sg17
-g18
-sg19
-g18
-sg20
-g1124
 sg22
 g23
 sbasb.

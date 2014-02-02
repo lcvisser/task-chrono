@@ -23,13 +23,17 @@ function setEventHandlers() {
     var name_field = document.getElementById('name_field');
     name_field.value = name_label;
     name_field.style.color = inactive_color;
-    name_field.onfocus = function() { handleFocusEvent(name_field, name_label, active_color); };
+    name_field.onfocus = function() {
+            handleFocusEvent(name_field, name_label, active_color);
+        };
     
     // Properties of the "duration"-input field
     var estimate_field = document.getElementById('estimate_field');
     estimate_field.value = estimate_label;
     estimate_field.style.color = inactive_color;
-    estimate_field.onfocus = function() { handleFocusEvent(estimate_field, estimate_label, active_color); };
+    estimate_field.onfocus = function() {
+            handleFocusEvent(estimate_field, estimate_label, active_color);
+        };
 }
 
 function handleFocusEvent(elem, label, color) {

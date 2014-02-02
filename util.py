@@ -25,7 +25,7 @@ os.environ['MPLCONFIGDIR'] = os.getcwdu()
 
 # Disable subprocess for matplotlib; not available on GAE
 def no_popen(*args, **kwargs):
-    raise OSError('popen not available')
+    raise OSError('popen disabled')
 subprocess.Popen = no_popen
 subprocess.PIPE = None
 subprocess.STDOUT = None
@@ -77,17 +77,50 @@ def format_estimate(value):
 
 
 # PNG generator for estimation statistics
-def generate_est_png():
+def generate_est_png(tasks, display=False):
     if mpl_available:
-        plt.title("Dynamic PNG")
-        for i in range(5): plt.plot(sorted(numpy.random.randn(25)))
-        rv = sio.StringIO()
-        plt.savefig(rv, format="png")
-        plt.clf()
-        return rv.getvalue().encode('base64').strip()
+        w = 0.8
+        lb = numpy.zeros(len(tasks))
+        estimates = numpy.zeros(len(tasks))
+        durations = numpy.zeros(len(tasks))
+        
+        for i, task in enumerate(tasks):
+            lb[i] = i - w/2
+            estimates[i] = task.estimate
+            durations[i] = task.duration
+            
+        plt.title('Estimation accuracy')
+        plt.bar(lb, estimates, w, color=(0.43,0.92,0.8), hold=True)
+        plt.bar(lb, durations, w, color=(0.77,0.9,1.0), hold=True)
+        
+        if not display:
+            im = sio.StringIO()
+            plt.savefig(im, format='png')
+            png = im.getvalue().encode('base64').strip()
+            plt.clf()
+            return png
+        else:
+            matplotlib.rcParams['backend'] = 'Qt4Agg'
+            plt.show()
+            return None
     else:
-        return ''
+        return None
 
 
-if __name__ == "__main__":
-    pass
+
+if __name__ == '__main__':
+    import random
+    
+    class Task:
+        def __init__(self, n, e, d):
+            self.name = n
+            self.estimate = e
+            self.duration = d
+    
+    tasks = []
+    for i in range(10):
+        tasks.append(Task('task' + str(i),
+            random.normalvariate(i, 0.2),
+            random.normalvariate(i, 0.4)))
+    
+    generate_est_png(tasks, True)

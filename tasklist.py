@@ -20,6 +20,7 @@ from util import format_datetime, format_duration, format_estimate
 from util import generate_est_png
 from util import STATE_IN_PROGRESS, STATE_NEW, STATE_FINISHED
 
+
 # Configure Jinja2 environment
 JINJA = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'),
@@ -100,15 +101,18 @@ class StatsPage(webapp2.RequestHandler):
         list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
         list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
         
-        # Get task duration and estimates
-        durations = [1, 2, 3, 4, 5]
-        estimates = [2, 2, 3, 3, 4]
+        # Get tasks for list, order by priority and creation date
+        task_query = Task.query(ancestor=list_key).order(Task.state, -Task.created)
+        tasks = task_query.fetch(100)
+        
+        # Generate PNG
+        est_png = generate_est_png(tasks)
         
         # Create template context
         context = {
             'list_name': DEFAULT_LIST_NAME,
             'page': 'stats',
-            'estimation_png': generate_est_png(),
+            'estimation_png': est_png,
             'logout_url': users.create_logout_url(self.request.uri)}
         
         # Parse and serve template
@@ -236,6 +240,7 @@ class StopTaskHandler(webapp2.RequestHandler):
         self.redirect('/')
 
 
+# Main application instance
 application = webapp2.WSGIApplication(
     [('/', MainPage),
     ('/stats', StatsPage),
