@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block content %}  
+{% block content %}
   <form action="new?list_name={{ list_name }}" method="post">
    <div id="form_container">
     <div id="new_task_form">
@@ -21,25 +21,22 @@
   
   <div id="index">
  {% for task in tasks %}
-  {% if task.state == 0 -%}
+  {% if task.state == 0 %}
    <div class="task in_progress">
     <a href="/stop?task_key={{ task.key.urlsafe() }}">
-     <div>
-      <img class="clock" alt="clock" src="img/clock.gif">
-  {% else -%}
-   {% if task.state == 1 -%}
+  {% elif task.state == 1 %}
    <div class="task">
-   {% elif task.state == 2 -%}
-   <div class="task finished">
-   {% endif -%}
     <a href="/start?task_key={{ task.key.urlsafe() }}">
+  {% elif task.state == 2 %}
+   <div class="task finished">
+    <a href="/start?task_key={{ task.key.urlsafe() }}">
+  {% endif -%}
      <div>
-  {% endif %}
       <span class="name">{{ task.name }}</span>
      </div>
     </a>
     <div id="{{ task.key.urlsafe() }}" onclick="toggleDetails(this)">
-     <span class="duration">{{ task.duration|duration }} logged (estimate: {{ task.estimate|duration }})</span>
+     <span class="duration">{{ task.duration|duration(task.state, task.restarted) }}</span><span class="estimate">(estimate: {{ task.estimate|estimate }})</span>
      <div>
       <table id="{{ task.key.urlsafe() }}_details">
        <tr><td>Created:</td><td>{{ task.created|datetime }}</td></tr>
@@ -53,4 +50,6 @@
    </div>
  {% endfor %}
   </div>
+  
+  <script type="text/javascript" src="js/tasklist.js" onload="listSetup()"></script>
 {% endblock %}

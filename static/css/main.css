@@ -73,7 +73,8 @@ div.finished span, div.finished td {
 }
 
 div.in_progress {
- border: 1px solid #000000;
+ background: #6eebcc;
+ border: 1px solid #ffffff;
 }
 
 div.form_field {
@@ -159,10 +160,11 @@ input#estimate_field {
  padding: 0px;
 }
 
-span.duration {
+span.duration, span.estimate {
  color: #7f7f7f;
  font-size: 24px;
  font-weight: bold;
+ padding: 2px;
 }
 
 span.name {

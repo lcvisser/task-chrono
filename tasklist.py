@@ -16,9 +16,9 @@ from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
-from util import format_datetime, format_duration
+from util import format_datetime, format_duration, format_estimate
 from util import generate_est_png
-
+from util import STATE_IN_PROGRESS, STATE_NEW, STATE_FINISHED
 
 # Configure Jinja2 environment
 JINJA = jinja2.Environment(
@@ -29,16 +29,11 @@ JINJA = jinja2.Environment(
 
 JINJA.filters['datetime'] = format_datetime
 JINJA.filters['duration'] = format_duration
+JINJA.filters['estimate'] = format_estimate
 
 
 # Default task list name
 DEFAULT_LIST_NAME = 'Tasks'
-
-
-# Task states in order of priority
-STATE_IN_PROGRESS = 0
-STATE_NEW = 1
-STATE_FINISHED = 2
 
 
 # Regular expressions for parsing duration strings
@@ -92,7 +87,7 @@ class MainPage(webapp2.RequestHandler):
             'logout_url': users.create_logout_url('/')}
         
         # Parse and serve template
-        template = JINJA.get_template('index.html')
+        template = JINJA.get_template('tasklist.html')
         self.response.write(template.render(context))
 
 
