@@ -79,19 +79,21 @@ def format_estimate(value):
 # PNG generator for estimation statistics
 def generate_est_png(tasks, display=False):
     if mpl_available:
-        w = 0.8
-        lb = numpy.zeros(len(tasks))
+        w = 0.4
+        lbe = numpy.zeros(len(tasks))
         estimates = numpy.zeros(len(tasks))
+        lbd = numpy.zeros(len(tasks))
         durations = numpy.zeros(len(tasks))
         
         for i, task in enumerate(tasks):
-            lb[i] = i - w/2
+            lbe[i] = i - w
             estimates[i] = task.estimate
+            lbd[i] = i
             durations[i] = task.duration
             
         plt.title('Estimation accuracy')
-        plt.bar(lb, estimates, w, color=(0.43,0.92,0.8), hold=True)
-        plt.bar(lb, durations, w, color=(0.77,0.9,1.0), hold=True)
+        plt.bar(lbe, estimates, w, color=(0.43,0.92,0.8), hold=True)
+        plt.bar(lbd, durations, w, color=(0.77,0.9,1.0), hold=True)
         
         if not display:
             im = sio.StringIO()
@@ -123,4 +125,4 @@ if __name__ == '__main__':
             random.normalvariate(i, 0.2),
             random.normalvariate(i, 0.4)))
     
-    generate_est_png(tasks, True)
+    generate_est_png(tasks, display=True)

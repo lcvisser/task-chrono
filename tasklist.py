@@ -102,7 +102,9 @@ class StatsPage(webapp2.RequestHandler):
         list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
         
         # Get tasks for list, order by priority and creation date
-        task_query = Task.query(ancestor=list_key).order(Task.state, -Task.created)
+        task_query = Task.query(
+                Task.state == STATE_FINISHED,
+                ancestor=list_key).order(Task.state, -Task.created)
         tasks = task_query.fetch(100)
         
         # Generate PNG
