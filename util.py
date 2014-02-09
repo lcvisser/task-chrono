@@ -84,7 +84,7 @@ def format_estimate(value):
 
 # PNG generator for estimation statistics
 def generate_est_png(tasks, number=10, display=False):
-    if mpl_available:
+    if len(tasks) > 0 and mpl_available:
         # Allocate arrays
         N = len(tasks)
         x = numpy.arange(N)
