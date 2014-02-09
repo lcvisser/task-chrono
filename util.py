@@ -8,7 +8,6 @@
 import datetime
 import os
 import StringIO as sio
-import subprocess
 import math
 import numpy
 
@@ -18,25 +17,32 @@ STATE_IN_PROGRESS = 0
 STATE_NEW = 1
 STATE_FINISHED = 2
 
+# Define colors
+GREEN = (0.43,0.92,0.80)
+RED = (0.92,0.43,0.43)
+DARK_BLUE = (0.43, 0.43, 0.92)
+LIGHT_BLUE = (0.77, 0.9, 1.0)
 
-# Set-up environment for matplotlib
-os.environ['MATPLOTLIBDATA'] = os.getcwdu()
-os.environ['MPLCONFIGDIR'] = os.getcwdu()
-
-# Disable subprocess for matplotlib; not available on GAE
-def no_popen(*args, **kwargs):
-    raise OSError('popen disabled')
-subprocess.Popen = no_popen
-subprocess.PIPE = None
-subprocess.STDOUT = None
-
-mpl_available = True
-try:
-    import matplotlib
+mpl_available = None
+if __name__ == '__main__':
+    # Running as script
+    os.chdir(os.environ['HOME'])
     import matplotlib.pyplot as plt
-except ImportError:
-    # Running on GAE Development server
-    mpl_available = False
+    mpl_available = True
+else:
+    # Running on GAE
+    
+    # Set-up environment for matplotlib
+    os.environ['MATPLOTLIBDATA'] = os.getcwdu()
+    os.environ['MPLCONFIGDIR'] = os.getcwdu()
+    
+    # Try to import matplotlib
+    mpl_available = True
+    try:
+        import matplotlib.pyplot as plt
+    except ImportError:
+        # Running on GAE Development server
+        mpl_available = False
 
 
 # Formatter function for date/time
@@ -77,32 +83,66 @@ def format_estimate(value):
 
 
 # PNG generator for estimation statistics
-def generate_est_png(tasks, display=False):
+def generate_est_png(tasks, number=10, display=False):
     if mpl_available:
-        w = 0.4
-        lbe = numpy.zeros(len(tasks))
-        estimates = numpy.zeros(len(tasks))
-        lbd = numpy.zeros(len(tasks))
-        durations = numpy.zeros(len(tasks))
+        # Allocate arrays
+        N = len(tasks)
+        x = numpy.arange(N)
+        lbe = numpy.zeros(N)
+        errors = numpy.zeros(N)
+        average = numpy.zeros(N)
+        sigma_minus = numpy.zeros(N)
+        sigma_plus = numpy.zeros(N)
+        colors = []
         
+        # Plot properties
+        M = max([0, N - number])  # index of first task to show
+        w = 0.6  # width of the bars
+        
+        # Compute values
         for i, task in enumerate(tasks):
-            lbe[i] = i - w
-            estimates[i] = task.estimate
-            lbd[i] = i
-            durations[i] = task.duration
-            
-        plt.title('Estimation accuracy')
-        plt.bar(lbe, estimates, w, color=(0.43,0.92,0.8), hold=True)
-        plt.bar(lbd, durations, w, color=(0.77,0.9,1.0), hold=True)
+            lbe[i] = i - w/2
+            errors[i] = (task.estimate - task.duration) / 60.0  # in minutes
+            average[i] = numpy.average(errors[:i+1]) / (i + 1)
+            sigma_minus[i] = average[i] - numpy.std(errors[:i+1])
+            sigma_plus[i] = average[i] + numpy.std(errors[:i+1])
+            if errors[i] >= 0:
+                # Logged duration was less than estimate
+                colors.append(GREEN)
+            else:
+                # Logged duration was more than estimate
+                colors.append(RED)
         
+        # Create plot
+        plt.title('Estimation accuracy')
+        plt.hold(True)
+        plt.xlim(M-w/2, N-1+w/2)
+        plt.xticks([])
+        plt.ylim(min([-1, numpy.min(errors)]), max([10, numpy.max(errors)+1]))
+        plt.ylabel('Estimation error [minutes]')
+        
+        # Plot data
+        plt.plot(x[M:], average[M:], color=DARK_BLUE)
+        plt.plot(x[M:], sigma_minus[M:], color=LIGHT_BLUE)
+        plt.plot(x[M:], sigma_plus[M:], color=LIGHT_BLUE)
+        plt.fill_between(x[M:], y1=sigma_minus[M:], y2=sigma_plus[M:], color=LIGHT_BLUE)
+        plt.bar(lbe[M:], errors[M:], w, color=colors[M:], alpha=0.4)
+        
+        # Create labels
+        for x, task in enumerate(tasks[M:]):
+            plt.text(x+M, 0.1, task.name, rotation=90, ha='center', va='bottom')
+
+        
+        # Output
         if not display:
+            # Output as base64-encoded string
             im = sio.StringIO()
             plt.savefig(im, format='png')
             png = im.getvalue().encode('base64').strip()
             plt.clf()
             return png
         else:
-            matplotlib.rcParams['backend'] = 'Qt4Agg'
+            # Show on screen
             plt.show()
             return None
     else:
@@ -120,9 +160,9 @@ if __name__ == '__main__':
             self.duration = d
     
     tasks = []
-    for i in range(10):
-        tasks.append(Task('task' + str(i),
-            random.normalvariate(i, 0.2),
-            random.normalvariate(i, 0.4)))
+    for i in reversed(range(15)):
+        tasks.append(Task('Task with ID' + str(i),
+            random.normalvariate(3600, 20/(i+1)),
+            random.normalvariate(3000, 40/(i+1))))
     
     generate_est_png(tasks, display=True)

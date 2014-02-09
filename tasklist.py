@@ -108,7 +108,7 @@ class StatsPage(webapp2.RequestHandler):
         tasks = task_query.fetch(100)
         
         # Generate PNG
-        est_png = generate_est_png(tasks)
+        est_png = generate_est_png(tasks, 25)
         
         # Create template context
         context = {
