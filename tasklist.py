@@ -166,7 +166,7 @@ class NewTaskHandler(webapp2.RequestHandler):
             d = parse(input_estimate, RE_DAY)
             h = parse(input_estimate, RE_HOUR)
             m = parse(input_estimate, RE_MIN)
-            estimate = datetime.timedelta(days=d, hours=h, minutes=m)
+            estimate = datetime.timedelta(hours=d*8 + h, minutes=m) #8hrs in a day; TODO make setting
             
             # Create and add new task
             task = Task(parent=list_key)

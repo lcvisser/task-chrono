@@ -23,6 +23,8 @@ RED = (0.92,0.43,0.43)
 DARK_BLUE = (0.43, 0.43, 0.92)
 LIGHT_BLUE = (0.77, 0.9, 1.0)
 
+
+# Try to load matplotlib
 mpl_available = None
 if __name__ == '__main__':
     # Running as script
