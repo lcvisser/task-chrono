@@ -120,7 +120,7 @@ def generate_est_png(tasks, number=10, display=False):
         plt.hold(True)
         plt.xlim(M-w/2, N-1+w/2)
         plt.xticks([])
-        plt.ylim(min([-1, numpy.min(errors)]), max([10, numpy.max(errors)+1]))
+        plt.ylim(min([-10, numpy.min(errors)-10]), max([10, numpy.max(errors)+10]))
         plt.ylabel('Estimation error [minutes]')
         
         # Plot data
@@ -132,7 +132,7 @@ def generate_est_png(tasks, number=10, display=False):
         
         # Create labels
         for x, task in enumerate(tasks[M:]):
-            plt.text(x+M, 0.1, task.name, rotation=90, ha='center', va='bottom')
+            plt.text(x+M, 1, task.name, rotation=90, ha='center', va='bottom')
 
         
         # Output

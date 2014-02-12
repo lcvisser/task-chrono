@@ -3,7 +3,7 @@
 {% block content %}  
   <div>
  {% if estimation_png %}
-   <img alt="estimation" src="data:image/png;base64,{{ estimation_png }}">
+   <img id="stats" alt="estimation" src="data:image/png;base64,{{ estimation_png }}">
  {% else %}
    <span>statistics not available</span>
  {% endif %}
