@@ -130,7 +130,7 @@ img.delete {
  vertical-align: middle;
 }
 
-img.stats {
+img#stats {
  display: block;
  margin: auto;
  width: 90%;

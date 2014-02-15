@@ -29,7 +29,8 @@ mpl_available = None
 if __name__ == '__main__':
     # Running as script
     os.chdir(os.environ['HOME'])
-    import matplotlib.pyplot as plt
+    from matplotlib.figure import Figure
+    from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
     mpl_available = True
 else:
     # Running on GAE
@@ -41,7 +42,8 @@ else:
     # Try to import matplotlib
     mpl_available = True
     try:
-        import matplotlib.pyplot as plt
+        from matplotlib.figure import Figure
+        from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
     except ImportError:
         # Running on GAE Development server
         mpl_available = False
@@ -116,36 +118,36 @@ def generate_est_png(tasks, number=10, display=False):
                 colors.append(RED)
         
         # Create plot
-        plt.title('Estimation accuracy')
-        plt.hold(True)
-        plt.xlim(M-w/2, N-1+w/2)
-        plt.xticks([])
-        plt.ylim(min([-10, numpy.min(errors)-10]), max([10, numpy.max(errors)+10]))
-        plt.ylabel('Estimation error [minutes]')
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(1, 1, 1)
+        ax.hold(True)
+        ax.set_xlim(M-w/2, N-1+w/2)
+        ax.set_xticklabels([])
+        ax.set_ylim(min([-10, numpy.min(errors)-10]), max([10, numpy.max(errors)+10]))
+        ax.set_ylabel('Estimation error [minutes]')
         
         # Plot data
-        plt.plot(x[M:], average[M:], color=DARK_BLUE)
-        plt.plot(x[M:], sigma_minus[M:], color=LIGHT_BLUE)
-        plt.plot(x[M:], sigma_plus[M:], color=LIGHT_BLUE)
-        plt.fill_between(x[M:], y1=sigma_minus[M:], y2=sigma_plus[M:], color=LIGHT_BLUE)
-        plt.bar(lbe[M:], errors[M:], w, color=colors[M:], alpha=0.4)
+        ax.plot(x[M:], average[M:], color=DARK_BLUE)
+        ax.plot(x[M:], sigma_minus[M:], color=LIGHT_BLUE)
+        ax.plot(x[M:], sigma_plus[M:], color=LIGHT_BLUE)
+        ax.fill_between(x[M:], y1=sigma_minus[M:], y2=sigma_plus[M:], color=LIGHT_BLUE)
+        ax.bar(lbe[M:], errors[M:], w, color=colors[M:], alpha=0.4)
         
         # Create labels
         for x, task in enumerate(tasks[M:]):
-            plt.text(x+M, 1, task.name, rotation=90, ha='center', va='bottom')
-
+            ax.text(x+M, 1, task.name, rotation=90, ha='center', va='bottom')
         
         # Output
         if not display:
             # Output as base64-encoded string
             im = sio.StringIO()
-            plt.savefig(im, format='png')
+            fig.savefig(im, format='png')
             png = im.getvalue().encode('base64').strip()
-            plt.clf()
             return png
         else:
             # Show on screen
-            plt.show()
+            canvas.show()
             return None
     else:
         return None

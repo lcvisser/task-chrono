@@ -250,4 +250,4 @@ application = webapp2.WSGIApplication(
     ('/delete', DeleteTaskHandler),
     ('/start', StartTaskHandler),
     ('/stop', StopTaskHandler)
-    ], debug=True)
+    ], debug=False)
