@@ -78,6 +78,15 @@ div.in_progress {
  border: 1px solid #ffffff;
 }
 
+div.form_container {
+ display: table;
+ width: 100%;
+}
+
+div.form_row {
+ display: table-row;
+}
+
 div.form_field {
  display: table-cell;
  margin: 10px;
@@ -85,15 +94,6 @@ div.form_field {
 }
 
 div#index {
-}
- 
-div#form_container {
- display: table;
- width: 100%;
-}
-
-div#new_task_form {
- display: table-row;
 }
 
 div#form_name {
@@ -172,6 +172,15 @@ span.duration, span.estimate {
 
 span.name {
  color: #000000;
- font-size: 1.2em;
+ font-size: 1.1em;
  font-weight: bold;
+}
+
+table#legend_details {
+ display: none;
+ padding: 5px;
+}
+
+table#legend_details td {
+ padding: 2px;
 }

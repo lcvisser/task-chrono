@@ -101,16 +101,16 @@ def generate_est_png(tasks, number=10, display=False):
         
         # Plot properties
         M = max([0, N - number])  # index of first task to show
-        w = 0.6  # width of the bars
+        w = 0.4  # width of the bars
         
         # Compute values
         for i, task in enumerate(tasks):
             lbe[i] = i - w/2
-            errors[i] = (task.estimate - task.duration) / 60.0  # in minutes
+            errors[i] = (task.duration - task.estimate) / 60.0  # in minutes
             average[i] = numpy.average(errors[:i+1]) / (i + 1)
             sigma_minus[i] = average[i] - numpy.std(errors[:i+1])
             sigma_plus[i] = average[i] + numpy.std(errors[:i+1])
-            if errors[i] >= 0:
+            if errors[i] <= 0:
                 # Logged duration was less than estimate
                 colors.append(GREEN)
             else:
@@ -123,9 +123,11 @@ def generate_est_png(tasks, number=10, display=False):
         ax = fig.add_subplot(1, 1, 1)
         ax.hold(True)
         ax.set_xlim(M-w/2, N-1+w/2)
+        ax.set_xticks([])
         ax.set_xticklabels([])
         ax.set_ylim(min([-10, numpy.min(errors)-10]), max([10, numpy.max(errors)+10]))
         ax.set_ylabel('Estimation error [minutes]')
+        ax.grid(axis='y')
         
         # Plot data
         ax.plot(x[M:], average[M:], color=DARK_BLUE)
@@ -164,9 +166,9 @@ if __name__ == '__main__':
             self.duration = d
     
     tasks = []
-    for i in reversed(range(15)):
+    for i in range(25):
         tasks.append(Task('Task with ID' + str(i),
-            random.normalvariate(3600, 20/(i+1)),
-            random.normalvariate(3000, 40/(i+1))))
+            random.normalvariate(3600, 20),
+            random.normalvariate(3600, 20)))
     
     generate_est_png(tasks, display=True)

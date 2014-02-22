@@ -1,3 +1,7 @@
+body {
+ font-size: 150%;
+}
+
 div#wrapper {
  width: 760px;
 }

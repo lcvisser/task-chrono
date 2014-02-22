@@ -1,19 +1,7 @@
-function toggleDetails(elem) {
-    // Get the "details"-table corresponding to the clicked element
-    var e = document.getElementById(elem.id + '_details');
-    
-    // Toggle the visibility
-    if(e.style.display == 'block') {
-        e.style.display = 'none';
-    } else {
-        e.style.display = 'block';
-    }
-}
-
 function setEventHandlers() {
     // Define labels
     var name_label = 'Task name';
-    var estimate_label = 'Estimated duration (e.g. 1d 5h 30m)';
+    var estimate_label = 'Estimated duration';
     
     // Define colors
     var active_color = '#000000';

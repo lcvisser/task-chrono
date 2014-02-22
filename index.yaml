@@ -15,4 +15,10 @@ indexes:
   properties:
   - name: state
   - name: created
+
+- kind: Task
+  ancestor: yes
+  properties:
+  - name: state
+  - name: created
     direction: desc

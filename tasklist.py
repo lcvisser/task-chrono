@@ -67,6 +67,18 @@ class Task(ndb.Model):
     state = ndb.IntegerProperty(default=STATE_NEW)
 
 
+# Settings class
+class Settings(ndb.Model):
+    # Owner of the settings, i.e. the user
+    owner = ndb.StringProperty(indexed=True)
+    
+    # Setting: number of working hours per day
+    hours_per_day = ndb.IntegerProperty(indexed=False, default=8)
+    
+    # Setting: name of active task list
+    active_list_name = ndb.StringProperty(indexed=False, default=DEFAULT_LIST_NAME)
+
+
 # Main page request handler
 class MainPage(webapp2.RequestHandler):
     @login_required
@@ -104,7 +116,7 @@ class StatsPage(webapp2.RequestHandler):
         # Get tasks for list, order by priority and creation date
         task_query = Task.query(
                 Task.state == STATE_FINISHED,
-                ancestor=list_key).order(Task.state, -Task.created)
+                ancestor=list_key).order(Task.created)
         tasks = task_query.fetch(100)
         
         # Generate PNG

@@ -5,7 +5,18 @@
  {% if estimation_png %}
    <img id="stats" alt="estimation" src="data:image/png;base64,{{ estimation_png }}">
  {% else %}
-   <span>statistics not available</span>
+   <span>[statistics not available]</span>
  {% endif %}
+  </div>
+  <div id="legend" onclick="toggleDetails(this)">
+   <span>Legend (click to toggle visibility)</span>
+   <div>
+    <table id="legend_details">
+     <tr><td>Green bars:</td><td>number of minutes it took you <i>less</i> than than what you estimated</td></tr>
+     <tr><td>Red bars:</td><td>number of minutes it took you <i>more</i> than than what you estimated</td></tr>
+     <tr><td>Blue line:</td><td>average estimation error (in minutes)</td></tr>
+     <tr><td>Shaded area:</td><td>standard deviation of the estimation error</td></tr>
+    </table>
+   </div>
   </div>
 {% endblock %}
