@@ -133,6 +133,18 @@ class StatsPage(webapp2.RequestHandler):
         template = JINJA.get_template('stats.html')
         self.response.write(template.render(context))
 
+class HelpPage(webapp2.RequestHandler):
+    def get(self):
+        # Create template context
+        context = {
+            'list_name': DEFAULT_LIST_NAME,
+            'page': 'help',
+            'logout_url': users.create_logout_url(self.request.uri)}
+        
+        # Parse and serve template
+        template = JINJA.get_template('help.html')
+        self.response.write(template.render(context))
+
 
 # Handler for creating a new task
 class NewTaskHandler(webapp2.RequestHandler):
@@ -258,6 +270,8 @@ class StopTaskHandler(webapp2.RequestHandler):
 application = webapp2.WSGIApplication(
     [('/', MainPage),
     ('/stats', StatsPage),
+    # placeholder for settings
+    ('/help', HelpPage),
     ('/new', NewTaskHandler),
     ('/delete', DeleteTaskHandler),
     ('/start', StartTaskHandler),
