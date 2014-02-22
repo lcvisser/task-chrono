@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}  
+  <form action="settings" method="post">
+   <div class="form_container">
+    <div class="form_row">
+     <div id="form_name" class="form_field">
+      <input id="name_field" type="text" name="task_name">
+     </div>
+     <div id="form_estimate" class="form_field">
+      <input id="estimate_field" type="text" name="estimate">
+     </div>
+     <div id="form_submit" class="form_field">
+      <input id="submit" type="submit" value="Create">
+     </div>
+    </div>
+   </div>
+  </form> 
+{% endblock %}
