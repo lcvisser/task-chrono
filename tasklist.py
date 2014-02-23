@@ -18,7 +18,7 @@ from google.appengine.ext.webapp.util import login_required
 
 from util import format_datetime, format_duration, format_estimate
 from util import generate_est_png
-from util import STATE_IN_PROGRESS, STATE_NEW, STATE_FINISHED
+from util import STATE
 
 
 # Configure Jinja2 environment
@@ -64,7 +64,7 @@ class Task(ndb.Model):
     finished = ndb.DateTimeProperty(auto_now_add=False)
     
     # Current state
-    state = ndb.IntegerProperty(default=STATE_NEW)
+    state = ndb.IntegerProperty(default=STATE.NEW)
 
 
 # Settings class
@@ -89,7 +89,7 @@ class MainPage(webapp2.RequestHandler):
         list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
         
         # Get tasks for list, order by priority and creation date
-        task_query = Task.query(ancestor=list_key).order(Task.state, -Task.created)
+        task_query = Task.query(ancestor=list_key).order(Task.state, Task.created)
         tasks = task_query.fetch()
         
         # Create template context
@@ -115,7 +115,7 @@ class StatsPage(webapp2.RequestHandler):
         
         # Get tasks for list, order by priority and creation date
         task_query = Task.query(
-                Task.state == STATE_FINISHED,
+                Task.state == STATE.FINISHED,
                 ancestor=list_key).order(Task.created)
         tasks = task_query.fetch(100)
         
@@ -223,7 +223,7 @@ class StartTaskHandler(webapp2.RequestHandler):
         task = task_key.get()
         
         # Set timestamps
-        if task.state in (STATE_NEW, STATE_FINISHED):
+        if task.state in (STATE.NEW, STATE.FINISHED):
             now = datetime.datetime.utcnow()
             if task.started is None:
                 # Task was not started before
@@ -231,7 +231,7 @@ class StartTaskHandler(webapp2.RequestHandler):
             
             # Set task state to "in progress"
             task.restarted = now
-            task.state = STATE_IN_PROGRESS
+            task.state = STATE.IN_PROGRESS
             task.put()
         
         # Redirect to main page
@@ -247,7 +247,7 @@ class StopTaskHandler(webapp2.RequestHandler):
         task = task_key.get()
         
         # Set timestamp
-        if task.state == STATE_IN_PROGRESS:
+        if task.state == STATE.IN_PROGRESS:
             now = datetime.datetime.utcnow()
             task.finished = now
             
@@ -259,7 +259,7 @@ class StopTaskHandler(webapp2.RequestHandler):
             task.duration = duration
             
             # Set task state to "finished"
-            task.state = STATE_FINISHED
+            task.state = STATE.FINISHED
             task.put()
         
         # Redirect to main page

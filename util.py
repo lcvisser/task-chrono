@@ -13,9 +13,14 @@ import numpy
 
 
 # Task states in order of priority
-STATE_IN_PROGRESS = 0
-STATE_NEW = 1
-STATE_FINISHED = 2
+class Enum:
+    def __init__(self, *sequential, **named):
+        enumerated = dict(zip(sequential, range(len(sequential))), **named)
+        for name, value in enumerated.iteritems():
+            setattr(self, name, value)
+
+STATE = Enum('IN_PROGRESS', 'NEW', 'FINISHED')
+
 
 # Define colors
 GREEN = (0.43,0.92,0.80)
@@ -61,19 +66,19 @@ def format_datetime(dt, format='%H:%M:%S %Y-%m-%d'):
 
 # Formatter function for durations
 def format_duration(duration, state, restarted):
-    if state == STATE_IN_PROGRESS:
+    if state == STATE.IN_PROGRESS:
         # Duration is logged duration plus time since last restart
         delta = datetime.datetime.now() - restarted
         m, s = divmod(duration + delta.seconds, 60)
         h, m = divmod(m, 60)
         d_str = '%d:%02d:%02d' % (h, m, s)
-    elif state == STATE_FINISHED:
+    elif state == STATE.FINISHED:
         # Duration is logged duration
         m, s = divmod(duration, 60)
         h, m = divmod(m, 60)
         d_str = '%d:%02d:%02d' % (h, m, s)
     else:
-        # state == STATE_NEW or undefined, duration is not defined
+        # state == STATE.NEW or undefined, duration is not defined
         d_str = '--:--:--'
     
     return d_str
