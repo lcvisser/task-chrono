@@ -1,7 +1,19 @@
 body {
- font-size: 125%;
+ font-size: 100%;
 }
 
 div#wrapper {
- width: 760px;
+ width: 500px;
+}
+
+input#name_field {
+ width: 100%;
+}
+
+input#estimate_field {
+ width: 215px;
+}
+
+#submit {
+ width: 100px;
 }

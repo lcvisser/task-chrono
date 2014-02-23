@@ -114,6 +114,18 @@ div#wrapper {
  position: relative;
 }
 
+h1 {
+ font-size: 1.3em;
+}
+
+h2 {
+ font-size: 1.2em;
+}
+
+h3 {
+ font-size: 1.1em;
+}
+
 hr {
  clear: both;
  display: block;
@@ -145,14 +157,6 @@ input {
  padding: 0px;
 }
 
-input#name_field {
- width: 100%;
-}
-
-input#estimate_field {
- width: 215px;
-}
-
 #submit {
  border: 1px solid #000000;
  height: 1.4em;
@@ -160,7 +164,6 @@ input#estimate_field {
  font-family: Arial, sans-serif;
  font-size: 1em;
  padding: 0px;
- width: 100px;
 }
 
 span.duration, span.estimate {

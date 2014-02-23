@@ -3,6 +3,7 @@
 <head>
  <meta charset="utf-8">
  <meta name="description" content="tasklist">
+ <meta name="viewport" content="width=device-width">
  
  {% if title -%}
  <title>{{ title }}</title>
@@ -29,8 +30,8 @@
    <div class="menu_item">
     <a href="#">Settings</a>
    </div>
-   <div class="menu_item">
-    <a href="#">Help</a>
+   <div class="menu_item {% if page == 'help' -%}menu_item_active{%- else -%}menu_item_inactive{%- endif -%}">
+    <a href="/help">Help</a>
    </div>
    <div class="menu_item">
     <a href="{{ logout_url|safe }}">Log out</a>
