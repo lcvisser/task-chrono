@@ -130,7 +130,7 @@ def generate_est_png(tasks, number=10, display=False):
         ax.set_xlim(M-w/2, N-1+w/2)
         ax.set_xticks([])
         ax.set_xticklabels([])
-        ax.set_ylim(min([-10, numpy.min(errors)-10]), max([10, numpy.max(errors)+10]))
+        ax.set_ylim(min([-10, numpy.min(errors)-10]), max([50, numpy.max(errors)+10]))
         ax.set_ylabel('Estimation error [minutes]')
         ax.grid(axis='y')
         

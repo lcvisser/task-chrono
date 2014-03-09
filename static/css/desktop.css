@@ -3,7 +3,7 @@ body {
 }
 
 div#wrapper {
- width: 500px;
+ width: 600px;
 }
 
 input#name_field {
@@ -11,7 +11,7 @@ input#name_field {
 }
 
 input#estimate_field {
- width: 215px;
+ width: 150px;
 }
 
 #submit {
