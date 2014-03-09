@@ -12,7 +12,7 @@ handlers:
 - url: /js
   static_dir: static/js
 - url: /.*
-  script: tasklist.application
+  script: task-chrono.application
 
 libraries:
 - name: jinja2

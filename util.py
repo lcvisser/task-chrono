@@ -6,10 +6,11 @@
 # The full license can be found in the LICENSE file.
 
 import datetime
-import os
-import StringIO as sio
+import jinja2
 import math
 import numpy
+import os
+import StringIO as sio
 
 
 # Task states in order of priority
@@ -160,7 +161,19 @@ def generate_est_png(tasks, number=10, display=False):
         return None
 
 
+# Configure Jinja2 environment
+JINJA = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True,
+    trim_blocks=True)
 
+JINJA.filters['datetime'] = format_datetime
+JINJA.filters['duration'] = format_duration
+JINJA.filters['estimate'] = format_estimate
+
+
+# Unit test
 if __name__ == '__main__':
     import random
     

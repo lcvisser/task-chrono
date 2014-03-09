@@ -6,8 +6,6 @@
 # The full license can be found in the LICENSE file.
 
 import datetime
-import jinja2
-import os
 import re
 import urllib
 import webapp2
@@ -16,25 +14,10 @@ from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
+from settings import DEFAULT_LIST_NAME
 from util import format_datetime, format_duration, format_estimate
 from util import generate_est_png
-from util import STATE
-
-
-# Configure Jinja2 environment
-JINJA = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'),
-    extensions=['jinja2.ext.autoescape'],
-    autoescape=True,
-    trim_blocks=True)
-
-JINJA.filters['datetime'] = format_datetime
-JINJA.filters['duration'] = format_duration
-JINJA.filters['estimate'] = format_estimate
-
-
-# Default task list name
-DEFAULT_LIST_NAME = 'Tasks'
+from util import JINJA, STATE
 
 
 # Regular expressions for parsing duration strings
@@ -65,85 +48,6 @@ class Task(ndb.Model):
     
     # Current state
     state = ndb.IntegerProperty(default=STATE.NEW)
-
-
-# Settings class
-class Settings(ndb.Model):
-    # Owner of the settings, i.e. the user
-    owner = ndb.StringProperty(indexed=True)
-    
-    # Setting: number of working hours per day
-    hours_per_day = ndb.IntegerProperty(indexed=False, default=8)
-    
-    # Setting: name of active task list
-    active_list_name = ndb.StringProperty(indexed=False, default=DEFAULT_LIST_NAME)
-
-
-# Main page request handler
-class MainPage(webapp2.RequestHandler):
-    @login_required
-    def get(self):
-        # Get key for requested list
-        user = users.get_current_user()
-        list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
-        list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
-        
-        # Get tasks for list, order by priority and creation date
-        task_query = Task.query(ancestor=list_key).order(Task.state, Task.created)
-        tasks = task_query.fetch()
-        
-        # Create template context
-        context = {
-            'list_name': DEFAULT_LIST_NAME,
-            'page': 'list',
-            'tasks': tasks,
-            'logout_url': users.create_logout_url('/')}
-        
-        # Parse and serve template
-        template = JINJA.get_template('tasklist.html')
-        self.response.write(template.render(context))
-
-
-# Stats page request handler
-class StatsPage(webapp2.RequestHandler):
-    @login_required
-    def get(self):
-        # Get key for requested list
-        user = users.get_current_user()
-        list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
-        list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
-        
-        # Get tasks for list, order by priority and creation date
-        task_query = Task.query(
-                Task.state == STATE.FINISHED,
-                ancestor=list_key).order(Task.created)
-        tasks = task_query.fetch(100)
-        
-        # Generate PNG
-        est_png = generate_est_png(tasks, 25)
-        
-        # Create template context
-        context = {
-            'list_name': DEFAULT_LIST_NAME,
-            'page': 'stats',
-            'estimation_png': est_png,
-            'logout_url': users.create_logout_url(self.request.uri)}
-        
-        # Parse and serve template
-        template = JINJA.get_template('stats.html')
-        self.response.write(template.render(context))
-
-class HelpPage(webapp2.RequestHandler):
-    def get(self):
-        # Create template context
-        context = {
-            'list_name': DEFAULT_LIST_NAME,
-            'page': 'help',
-            'logout_url': users.create_logout_url(self.request.uri)}
-        
-        # Parse and serve template
-        template = JINJA.get_template('help.html')
-        self.response.write(template.render(context))
 
 
 # Handler for creating a new task
@@ -264,16 +168,3 @@ class StopTaskHandler(webapp2.RequestHandler):
         
         # Redirect to main page
         self.redirect('/')
-
-
-# Main application instance
-application = webapp2.WSGIApplication(
-    [('/', MainPage),
-    ('/stats', StatsPage),
-    # placeholder for settings
-    ('/help', HelpPage),
-    ('/new', NewTaskHandler),
-    ('/delete', DeleteTaskHandler),
-    ('/start', StartTaskHandler),
-    ('/stop', StopTaskHandler)
-    ], debug=False)
