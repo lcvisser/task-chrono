@@ -2,5 +2,69 @@
 
 {% block content %}  
   <div>
+   <h1>What is task-chrono?</h1>
+   <p><b>task-chrono</b> is a tool that helps in task planning. It does this by
+   providing statistics on how accurately you estimate task duration. This will
+   give insight in how good you are at estimating task duration, which in turn
+   will help planning your work.</p>
+   
+   <p>The applicaton menu shows the following options:</p>
+   <ul>
+    <li><i>List:</i> the list of the tasks in your current list</li>
+    <li><i>Stats:</i> estimation statistics</li>
+    <li><i>Settings:</i> configure the application behaviour and manage lists</li>
+    <li><i>Help:</i> this page</li>
+    <li><i>Log out:</i> log out from the application</li>
+   </ul>
+   
+   <h1>Task list</h1>
+   <p>The task list shows all the tasks in the current list, sorted by date and
+   status. Tasks in progress are on top, followed by newly created tasks, and
+   finally finished tasks at the bottom. In all three categories, the oldest
+   tasks is on top.</p>
+    
+    <h2>Adding a new task</h2>
+    <p>To add a new task to the list, simply type a task name in the left field
+    at the top of the page. In the second field, enter an estimate of how long
+    you think it will take to complete the task (see hereafter). Click on the
+    <i>Create</i> button to add the task to the list.</p>
+     
+     <h3>Estimated duration</h3>
+     <p>Entering an estimate for task duration, use the following format:</p>
+     <pre>NNd NNh NNs</pre>
+     <p>Here, <i>NN</i> is any number, and <i>d</i> denotes work days, <i>h</i>
+     denotes hours, and <i>m</i> minutes. The order of the groups is not
+     important, nor are all mandatory: one is enough. As an example, the
+     following all signify a duration of 9 hours and 30 minutes (assuming that
+     one work day is set to be 8 hours; see below):</p>
+     <pre>
+     1d 1h 30m
+     9h 30m
+     1.125d 0.5h
+     1.1875d
+     9.5h
+     570m
+     </pre>
+    
+    <h2>Starting and stopping a task</h2>
+    <p>Starting, stopping, an restarting a task is done by simply clicking on
+    task name in the list. Active running tasks are highlighted in green, with
+    the duration being updated in real time. Finished tasks are shown in a light
+    grey, but can be restarted by again clicking on the task name. New tasks can
+    be recognized by having no duration logged.</p>
+    
+    <h2>Task properties</h2>
+    <p>By clicking on the line below the task name, the task properties are
+    reveiled. These properties are the creation date and time, the moment it was
+    first started, the moment it was last started, and the moment it was
+    finished.
+    
+    <h2>Deleting a task</h2>
+    <p>Below the tasks properties a button is shown to delete the task from the
+    list. Removing a large number of old tasks can be done via the settings
+    page.</p>
+   
+   <h1>Statistics</h1>
+   <h1>Settings</h1>
   </div>
 {% endblock %}
