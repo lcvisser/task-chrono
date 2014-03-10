@@ -26,3 +26,6 @@ class Settings(ndb.Model):
     
     # Setting: name of active task list
     active_list_name = ndb.StringProperty(indexed=False, default=DEFAULT_LIST_NAME)
+    
+    # List of task list names
+    list_names = ndb.StringProperty(indexed=False, repeated=True)
