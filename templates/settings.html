@@ -1,17 +1,52 @@
 {% extends "base.html" %}
 
 {% block content %}  
-  <form action="settings" method="post">
+  <form action="save" method="post">
    <div class="form_container">
     <div class="form_row">
-     <div id="form_name" class="form_field">
-      <input id="name_field" type="text" name="task_name">
+     <div class="form_label">
+      Hours per day:
      </div>
-     <div id="form_estimate" class="form_field">
-      <input id="estimate_field" type="text" name="estimate">
+     <div class="form_field">
+      <select id="hours_field" name="hours_per_day">
+ {% for h in possible_hours_per_day %}
+       <option value="{{ h }}" {% if h == settings.hours_per_day -%}selected{% endif %}>{{ h }}</option>
+ {% endfor %}
+      </select>
      </div>
+    </div>
+    <div class="form_row">
+     <div class="form_label">
+      Active list:
+     </div>
+     <div class="form_field">
+      <select id="active_list_field" name="active_list">
+ {% for list in settings.list_names %}
+       <option value="{{ list }}" {% if list == settings.active_list -%}selected{% endif %}>{{ list }}</option>
+ {% endfor %}
+      </select>
+     </div>
+    </div>
+    <div class="form_row">
+     <div class="form_label">
+      New list:
+     </div>
+     <div class="form_field">
+      <input id="new_list_field" type="text" name="new_list">
+     </div>
+    </div>
+    <div class="form_row">
+     <div class="form_label">
+      Prune "{{ settings.active_list }}":
+     </div>
+     <div class="form_field">
+      <input type="checkbox" name="prune"> Delete all tasks in "{{ settings.active_list }}"
+     </div>
+    </div>
+    <div class="form_row">
+     <div class="form_field"></div>
      <div id="form_submit" class="form_field">
-      <input id="submit" type="submit" value="Create">
+      <input class="submit" type="submit" value="Submit changes">
      </div>
     </div>
    </div>

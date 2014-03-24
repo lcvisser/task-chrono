@@ -87,6 +87,12 @@ div.form_row {
  display: table-row;
 }
 
+div.form_label {
+ display: table-cell;
+ margin: 10px;
+ padding: 5px;
+}
+
 div.form_field {
  display: table-cell;
  margin: 10px;
@@ -155,15 +161,29 @@ input {
  font-family: Arial, sans-serif;
  font-size: 1em;
  padding: 0px;
+ padding: 0px;
 }
 
-#submit {
+select {
  border: 1px solid #000000;
+ height: 1.4em;
+ margin: 0px;
+ font-family: Arial, sans-serif;
+ font-size: 1em;
+}
+
+.submit {
+ border: none;
+ background-color: #fff;
  height: 1.4em;
  margin: 1px;
  font-family: Arial, sans-serif;
  font-size: 1em;
  padding: 0px;
+}
+
+.submit:hover {
+ background-color: #c5e6ff;
 }
 
 span.duration, span.estimate {

@@ -13,13 +13,14 @@ import os
 import StringIO as sio
 
 
-# Task states in order of priority
+# Useful enumeration class
 class Enum:
     def __init__(self, *sequential, **named):
         enumerated = dict(zip(sequential, range(len(sequential))), **named)
         for name, value in enumerated.iteritems():
             setattr(self, name, value)
 
+# Task states in order of priority
 STATE = Enum('IN_PROGRESS', 'NEW', 'FINISHED')
 
 
@@ -131,7 +132,7 @@ def generate_est_png(tasks, number=10, display=False):
         ax.set_xlim(M-w/2, N-1+w/2)
         ax.set_xticks([])
         ax.set_xticklabels([])
-        ax.set_ylim(min([-10, numpy.min(errors)-10]), max([50, numpy.max(errors)+10]))
+        ax.set_ylim(min([-10, numpy.min(errors)-10]), max([180, numpy.max(errors)+10]))
         ax.set_ylabel('Estimation error [minutes]')
         ax.grid(axis='y')
         

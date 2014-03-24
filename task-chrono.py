@@ -11,6 +11,7 @@ from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
+from settings import SettingsPage, SaveSettingsHandler
 from settings import DEFAULT_LIST_NAME
 from stats import StatsPage
 from task import Task, NewTaskHandler, DeleteTaskHandler
@@ -61,10 +62,11 @@ class HelpPage(webapp2.RequestHandler):
 application = webapp2.WSGIApplication(
     [('/', MainPage),
     ('/stats', StatsPage),
-    # placeholder for settings
+    ('/settings', SettingsPage),
     ('/help', HelpPage),
     ('/new', NewTaskHandler),
     ('/delete', DeleteTaskHandler),
     ('/start', StartTaskHandler),
-    ('/stop', StopTaskHandler)
+    ('/stop', StopTaskHandler),
+    ('/save', SaveSettingsHandler)
     ], debug=False)

@@ -27,10 +27,7 @@ RE_MIN = re.compile('(\d*\.?\d+)\s*m')
 
 
 # Task class
-class Task(ndb.Model):
-    # Owner of the task, i.e. the user creating it
-    owner = ndb.StringProperty(indexed=True)
-    
+class Task(ndb.Model):    
     # Descriptive name of the task
     name = ndb.StringProperty(indexed=False, default='')
     
@@ -61,7 +58,6 @@ class NewTaskHandler(webapp2.RequestHandler):
             # Get key for requested list
             list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
             list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
-            query_params = {'list_name': list_name}
             
             # Validate task name
             input_name = self.request.get('task_name', '')
@@ -103,6 +99,7 @@ class NewTaskHandler(webapp2.RequestHandler):
             task.put()
             
             # Redirect to main page
+            query_params = {'list_name': list_name}
             self.redirect('/?' + urllib.urlencode(query_params))
 
 

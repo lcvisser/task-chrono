@@ -29,7 +29,7 @@ class StatsPage(webapp2.RequestHandler):
         # Get tasks for list, order by priority and creation date
         task_query = Task.query(
                 Task.state == STATE.FINISHED,
-                ancestor=list_key).order(Task.created)
+                ancestor=list_key).order(Task.finished)
         tasks = task_query.fetch(100)
         
         # Generate PNG

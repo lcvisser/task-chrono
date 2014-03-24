@@ -27,8 +27,8 @@
    <div class="menu_item {% if page == 'stats' -%}menu_item_active{%- else -%}menu_item_inactive{%- endif -%}">
     <a href="/stats">Stats</a>
    </div>
-   <div class="menu_item">
-    <a href="#">Settings</a>
+   <div class="menu_item {% if page == 'settings' -%}menu_item_active{%- else -%}menu_item_inactive{%- endif -%}">
+    <a href="/settings">Settings</a>
    </div>
    <div class="menu_item {% if page == 'help' -%}menu_item_active{%- else -%}menu_item_inactive{%- endif -%}">
     <a href="/help">Help</a>
