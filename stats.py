@@ -40,6 +40,7 @@ class StatsPage(webapp2.RequestHandler):
         
         # Create template context
         context = {
+            'title': 'Statistics for <%s>' % list_name,
             'page': 'stats',
             'estimation_png': est_png,
             'logout_url': users.create_logout_url(self.request.uri)}

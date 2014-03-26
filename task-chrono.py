@@ -37,6 +37,7 @@ class MainPage(webapp2.RequestHandler):
         
         # Create template context
         context = {
+            'title': 'Overview of <%s>' % list_name,
             'page': 'list',
             'tasks': tasks,
             'logout_url': users.create_logout_url('/')}
