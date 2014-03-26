@@ -11,7 +11,7 @@ from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
-from settings import DEFAULT_LIST_NAME
+from settings import get_settings
 from task import Task
 from util import generate_est_png
 from util import JINJA, STATE
@@ -21,9 +21,12 @@ from util import JINJA, STATE
 class StatsPage(webapp2.RequestHandler):
     @login_required
     def get(self):
-        # Get key for requested list
+        # Get settings for current user
         user = users.get_current_user()
-        list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
+        settings = get_settings(user)
+        
+        # Get key for current list
+        list_name = settings.active_list
         list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
         
         # Get tasks for list, order by priority and creation date
@@ -37,7 +40,6 @@ class StatsPage(webapp2.RequestHandler):
         
         # Create template context
         context = {
-            'list_name': DEFAULT_LIST_NAME,
             'page': 'stats',
             'estimation_png': est_png,
             'logout_url': users.create_logout_url(self.request.uri)}

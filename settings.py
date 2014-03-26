@@ -5,7 +5,6 @@
 # task-chrono is distributed under the terms and conditions of the MIT license.
 # The full license can be found in the LICENSE file.
 
-import urllib
 import webapp2
 
 from google.appengine.api import users
@@ -37,7 +36,7 @@ class Settings(ndb.Model):
 
 # Helper function to get settings for user
 def get_settings(user):
-    # Get key for requested list
+    # Get key for settings
     settings_key = ndb.Key('User', user.user_id())
     
     # Get current settings
@@ -109,5 +108,4 @@ class SaveSettingsHandler(webapp2.RequestHandler):
             settings.put()
             
             # Redirect to main page
-            query_params = {'list_name': DEFAULT_LIST_NAME}
-            self.redirect('/?' + urllib.urlencode(query_params))
+            self.redirect('/')

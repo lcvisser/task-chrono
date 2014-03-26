@@ -7,14 +7,13 @@
 
 import datetime
 import re
-import urllib
 import webapp2
 
 from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
-from settings import DEFAULT_LIST_NAME
+from settings import get_settings
 from util import format_datetime, format_duration, format_estimate
 from util import generate_est_png
 from util import JINJA, STATE
@@ -55,8 +54,11 @@ class NewTaskHandler(webapp2.RequestHandler):
             # Login is required, redirect to login page
             self.redirect(users.create_login_url(self.request.uri))
         else:
-            # Get key for requested list
-            list_name = self.request.get('list_name', DEFAULT_LIST_NAME)
+            # Get settings for current user
+            settings = get_settings(user)
+            
+            # Get key for current list
+            list_name = settings.active_list
             list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
             
             # Validate task name
@@ -90,7 +92,8 @@ class NewTaskHandler(webapp2.RequestHandler):
             d = parse(input_estimate, RE_DAY)
             h = parse(input_estimate, RE_HOUR)
             m = parse(input_estimate, RE_MIN)
-            estimate = datetime.timedelta(hours=d*8 + h, minutes=m) #8hrs in a day; TODO make setting
+            hpd = int(settings.hours_per_day)
+            estimate = datetime.timedelta(hours=d*hpd + h, minutes=m)
             
             # Create and add new task
             task = Task(parent=list_key)
@@ -99,8 +102,7 @@ class NewTaskHandler(webapp2.RequestHandler):
             task.put()
             
             # Redirect to main page
-            query_params = {'list_name': list_name}
-            self.redirect('/?' + urllib.urlencode(query_params))
+            self.redirect('/')
 
 
 # Handler for deleting a task
