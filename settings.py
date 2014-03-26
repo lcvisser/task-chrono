@@ -35,26 +35,33 @@ class Settings(ndb.Model):
     list_names = ndb.StringProperty(indexed=False, repeated=True)
 
 
+# Helper function to get settings for user
+def get_settings(user):
+    # Get key for requested list
+    settings_key = ndb.Key('User', user.user_id())
+    
+    # Get current settings
+    settings_query = Settings.query(ancestor=settings_key)
+    settings = settings_query.get()
+
+    # Create new settings object if none exists
+    if not settings:
+        settings = Settings(parent=settings_key)
+        settings.list_names = [DEFAULT_LIST_NAME]
+        settings.put()
+    
+    return settings
+
+
 # Settings page request handler
 class SettingsPage(webapp2.RequestHandler):
     @login_required
     def get(self):
-        # Get key for requested list
-        user = users.get_current_user()
-        settings_key = ndb.Key('User', user.user_id())
-        
-        # Get current settings
-        settings_query = Settings.query(ancestor=settings_key)
-        settings = settings_query.get()
-        
-        # Create new settings object if none exists
-        if not settings:
-            settings = Settings(parent=settings_key)
-            settings.list_names = [DEFAULT_LIST_NAME]
+        # Get settings
+        settings = get_settings(users.get_current_user())
         
         # Create template context
         context = {
-            'list_name': DEFAULT_LIST_NAME,
             'page': 'settings',
             'settings': settings,
             'possible_hours_per_day': POSSIBLE_HOURS_PER_DAY,
@@ -72,17 +79,8 @@ class SaveSettingsHandler(webapp2.RequestHandler):
             # Login is required, redirect to login page
             self.redirect(users.create_login_url(self.request.uri))
         else:
-            # Get key for requested list
-            settings_key = ndb.Key('User', user.user_id())
-            
-            # Get current settings
-            settings_query = Settings.query(ancestor=settings_key)
-            settings = settings_query.get()
-        
-            # Create new settings object if none exists
-            if not settings:
-                settings = Settings(parent=settings_key)
-                settings.list_names = [DEFAULT_LIST_NAME]
+            # Get settings
+            settings = get_settings(user)
             
             # Set hours per day
             try:

@@ -20,6 +20,7 @@ class Enum:
         for name, value in enumerated.iteritems():
             setattr(self, name, value)
 
+
 # Task states in order of priority
 STATE = Enum('IN_PROGRESS', 'NEW', 'FINISHED')
 
