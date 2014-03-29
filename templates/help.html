@@ -32,11 +32,11 @@
      <h3>Estimated duration</h3>
      <p>Entering an estimate for task duration, use the following format:</p>
      <pre>NNd NNh NNs</pre>
-     <p>Here, <i>NN</i> is any number, and <i>d</i> denotes work days, <i>h</i>
-     denotes hours, and <i>m</i> minutes. The order of the groups is not
-     important, nor are all mandatory: one is enough. As an example, the
-     following all signify a duration of 9 hours and 30 minutes (assuming that
-     one work day is set to be 8 hours; see below):</p>
+     <p>Here, <i>NN</i> is any number, and 'd' denotes work days, 'h' denotes
+     hours, and 'm' minutes. The order of the groups is not important, nor are
+     all mandatory: one is enough. As an example, the following all signify a
+     duration of 9 hours and 30 minutes (assuming that one work day is set to be
+     8 hours; see below):</p>
      <pre>
      1d 1h 30m
      9h 30m
@@ -65,6 +65,25 @@
     page.</p>
    
    <h1>Statistics</h1>
+   <p>The statistics page shows you how accurate your estimates correspond to
+   the actual logged time. This is shown by green (for tasks that took you less
+   time than estimated) and red (for tasks that took you longer) bars for each
+   task. In addition, the average error between estimate and logged duration is
+   shown, together with the standard deviation. A small standard deviation means
+   that your estimates are consistently off (by the amount indicated by the
+   average), while a large standard deviation signifies that your estimated and
+   logged duration do no correspond well, in varying degree.</p>
+   
    <h1>Settings</h1>
+   <p>The following settings can be controlled via the settings page:</p>
+   <ul>
+    <li><i>Hours per day:</i> this controls how the 'd' modifier is interpreted
+     in setting task duration.</li>
+    <li><i>Active list:</i> the task list you want to use. You can have multiple
+     lists, but only one can be active in the overview and statistics.</li>
+    <li><i>New list:</i> create a new empty list.</li>
+    <li><i>Delete list:</i> deletes all tasks in a list, as well as the list
+     itself.</li>
+   </ul>
   </div>
 {% endblock %}
