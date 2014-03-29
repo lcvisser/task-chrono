@@ -42,6 +42,10 @@ div.menu_item_active {
  color: #ffffff;
 }
 
+div.message {
+ background: #6eebcc;
+}
+
 div.task {
  background: #ffffff;
  border: 1px solid #ffffff;
@@ -97,6 +101,10 @@ div.form_field {
  display: table-cell;
  margin: 10px;
  padding: 5px;
+}
+
+div.warning {
+ background-color: #ff7300;
 }
 
 div#index {

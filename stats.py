@@ -11,10 +11,10 @@ from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
-from settings import get_settings
-from task import Task
-from util import generate_est_png
-from util import JINJA, STATE
+import render
+import settings
+import task
+import util
 
 
 # Stats page request handler
@@ -23,20 +23,20 @@ class StatsPage(webapp2.RequestHandler):
     def get(self):
         # Get settings for current user
         user = users.get_current_user()
-        settings = get_settings(user)
+        user_settings = settings.get_settings(user)
         
         # Get key for current list
-        list_name = settings.active_list
+        list_name = user_settings.active_list
         list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
         
         # Get tasks for list, order by priority and creation date
-        task_query = Task.query(
-                Task.state == STATE.FINISHED,
-                ancestor=list_key).order(Task.finished)
+        task_query = task.Task.query(
+                task.Task.state == task.STATE.FINISHED,
+                ancestor=list_key).order(task.Task.finished)
         tasks = task_query.fetch(100)
         
         # Generate PNG
-        est_png = generate_est_png(tasks, 25)
+        est_png = util.generate_est_png(tasks, 25)
         
         # Create template context
         context = {
@@ -46,5 +46,5 @@ class StatsPage(webapp2.RequestHandler):
             'logout_url': users.create_logout_url(self.request.uri)}
         
         # Parse and serve template
-        template = JINJA.get_template('stats.html')
+        template = render.JINJA.get_template('stats.html')
         self.response.write(template.render(context))

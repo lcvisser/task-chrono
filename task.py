@@ -13,10 +13,12 @@ from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
-from settings import get_settings
-from util import format_datetime, format_duration, format_estimate
-from util import generate_est_png
-from util import JINJA, STATE
+import settings
+import util
+
+
+# Task states in order of priority
+STATE = util.Enum('IN_PROGRESS', 'NEW', 'FINISHED')
 
 
 # Regular expressions for parsing duration strings
@@ -55,24 +57,24 @@ class NewTaskHandler(webapp2.RequestHandler):
             self.redirect(users.create_login_url(self.request.uri))
         else:
             # Get settings for current user
-            settings = get_settings(user)
+            user_settings = settings.get_settings(user)
             
             # Get key for current list
-            list_name = settings.active_list
+            list_name = user_settings.active_list
             list_key = ndb.Key('User', user.user_id(), 'TaskList', list_name)
             
             # Validate task name
             input_name = self.request.get('task_name', '')
             if input_name == '' or input_name.isspace():
                 # Invalid task name
-                self.redirect('/?' + urllib.urlencode(query_params))
+                self.redirect('/')
                 return
             
             # Validate task estimate
             input_estimate = self.request.get('estimate', '')
             if input_estimate == '' or input_estimate[0].isdigit() == False:
                 # Invalid estimate
-                self.redirect('/?' + urllib.urlencode(query_params))
+                self.redirect('/')
                 return
             
             # Helper function for parsing parts of estimate string
@@ -92,7 +94,7 @@ class NewTaskHandler(webapp2.RequestHandler):
             d = parse(input_estimate, RE_DAY)
             h = parse(input_estimate, RE_HOUR)
             m = parse(input_estimate, RE_MIN)
-            hpd = int(settings.hours_per_day)
+            hpd = int(user_settings.hours_per_day)
             estimate = datetime.timedelta(hours=d*hpd + h, minutes=m)
             
             # Create and add new task

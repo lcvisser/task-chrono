@@ -11,7 +11,8 @@ from google.appengine.api import users
 from google.appengine.ext import ndb
 from google.appengine.ext.webapp.util import login_required
 
-from util import JINJA, STATE
+import render
+import task
 
 
 # Default task list name
@@ -62,12 +63,13 @@ class SettingsPage(webapp2.RequestHandler):
         # Create template context
         context = {
             'page': 'settings',
+            'saved': self.request.get('saved', ''),
             'settings': settings,
             'possible_hours_per_day': POSSIBLE_HOURS_PER_DAY,
             'logout_url': users.create_logout_url('/')}
         
         # Parse and serve template
-        template = JINJA.get_template('settings.html')
+        template = render.JINJA.get_template('settings.html')
         self.response.write(template.render(context))
 
 
@@ -91,21 +93,49 @@ class SaveSettingsHandler(webapp2.RequestHandler):
                 settings.hours_per_day = hours_per_day
             
             # Set active list name
-            active_list_name = self.request.get('active_list', '')
-            if active_list_name in settings.list_names:
-                settings.active_list = active_list_name
+            current_active_list = settings.active_list
+            new_active_list = self.request.get('active_list', '')
+            if new_active_list in settings.list_names:
+                settings.active_list = new_active_list
             
             # Add list (if necessary)
             new_list_name = self.request.get('new_list', '')
-            if new_list_name == '' or new_list_name.isspace():
+            if new_list_name == '' or new_list_name.isspace() or (new_list_name in settings.list_names):
                 # Invalid name
                 pass
             else:
                 settings.list_names.append(new_list_name)
                 settings.active_list = new_list_name    
             
+            # Delete list (if necessary)
+            if self.request.get('delete_list', 'off').lower() == 'on':
+                list_key = ndb.Key('User', user.user_id(), 'TaskList', current_active_list)
+        
+                # Get tasks for list
+                task_query = task.Task.query(ancestor=list_key)
+                tasks = task_query.fetch()
+                
+                # Delete tasks
+                for t in tasks:
+                    t.key.delete()
+                    
+                # Delete the list name
+                if current_active_list in settings.list_names:
+                    settings.list_names.remove(current_active_list)
+                
+                # Handle list deletion
+                if not settings.list_names:
+                    # No more lists left
+                    settings.active_list = DEFAULT_LIST_NAME
+                    settings.list_names = [DEFAULT_LIST_NAME]
+                elif settings.active_list == current_active_list:
+                    # Current active list was deleted; set most recently added
+                    settings.active_list = settings.list_names[-1]
+                else:
+                    pass
+            
             # Save settings
             settings.put()
             
             # Redirect to main page
-            self.redirect('/')
+            self.redirect('/settings?saved=yes')
